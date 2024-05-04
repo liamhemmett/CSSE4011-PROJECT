@@ -37,8 +37,3 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/modules/tinycrypt/lib/cmake_install.cmake")
-endif()
-

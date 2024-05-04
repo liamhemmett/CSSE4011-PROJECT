@@ -26,6 +26,9 @@ extern const k_tid_t thread_blue;
 
 int main(void) { 
   printf("hello world\n"); 
+  printf("1\n"); 
   gpio_init();
+  printf("2\n"); 
   test();
+  printf("done\n"); 
 }

@@ -139,16 +139,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/subsys/bluetooth/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/subsys/net/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/subsys/shell/cmake_install.cmake")
 endif()
 

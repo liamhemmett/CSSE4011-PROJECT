@@ -1,7 +1,0 @@
-/ {
-	ir_trans: ir_trans {
-		compatible = "ir-trans";
-                /* using built-in LED pin for demonstration */
-		gpios = <&gpioa 27 GPIO_ACTIVE_HIGH>;
-	};
-};

@@ -79,11 +79,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/drivers/entropy/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/drivers/gpio/cmake_install.cmake")
 endif()
 

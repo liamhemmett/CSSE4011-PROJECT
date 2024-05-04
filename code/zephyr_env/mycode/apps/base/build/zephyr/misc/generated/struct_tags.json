@@ -9,7 +9,6 @@
         "websocket_context"
     ],
     "__subsystem": [
-        "entropy_driver_api",
         "gpio_driver_api",
         "uart_driver_api",
         "crypto_driver_api",
@@ -29,6 +28,7 @@
         "emul_bbram_backend_api",
         "fuel_gauge_emul_driver_api",
         "emul_sensor_backend_api",
+        "entropy_driver_api",
         "espi_driver_api",
         "espi_saf_driver_api",
         "flash_driver_api",
