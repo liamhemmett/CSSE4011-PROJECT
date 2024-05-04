@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/zephyr/drivers/pinctrl
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/drivers/pinctrl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/root/csse4011/prac3/mycode/apps/AHU/build/zephyr/drivers/pinctrl/renesas/cmake_install.cmake")
+  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/drivers/pinctrl/renesas/cmake_install.cmake")
 endif()
 

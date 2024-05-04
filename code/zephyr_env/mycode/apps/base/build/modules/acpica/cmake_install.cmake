@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/zephyr/modules/acpica
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/modules/acpica
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

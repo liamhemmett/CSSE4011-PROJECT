@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/mycode/apps/AHU
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/root/csse4011/prac3/mycode/apps/AHU/build/zephyr/cmake_install.cmake")
+  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/root/csse4011/prac3/mycode/apps/AHU/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -25,7 +25,7 @@ set(CMAKE_AR "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zep
 set(CMAKE_C_COMPILER_AR "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar")
 set(CMAKE_RANLIB "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib")
 set(CMAKE_C_COMPILER_RANLIB "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.bfd")
+set(CMAKE_LINKER "/root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/arm-zephyr-eabi/bin/ld.bfd")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)

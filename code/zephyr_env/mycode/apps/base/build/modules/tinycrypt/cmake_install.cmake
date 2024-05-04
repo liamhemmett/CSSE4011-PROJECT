@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/modules/crypto/tinycrypt
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/modules/crypto/tinycrypt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/root/csse4011/prac3/mycode/apps/AHU/build/modules/tinycrypt/lib/cmake_install.cmake")
+  include("/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/modules/tinycrypt/lib/cmake_install.cmake")
 endif()
 

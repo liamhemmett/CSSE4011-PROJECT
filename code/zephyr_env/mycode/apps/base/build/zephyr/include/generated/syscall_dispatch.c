@@ -227,6 +227,10 @@ uintptr_t z_mrsh_device_is_ready(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
 __weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_device_init(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_k_thread_stack_alloc(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
@@ -653,6 +657,7 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_UART_DRV_CMD] = z_mrsh_uart_drv_cmd,
 	[K_SYSCALL_DEVICE_GET_BINDING] = z_mrsh_device_get_binding,
 	[K_SYSCALL_DEVICE_IS_READY] = z_mrsh_device_is_ready,
+	[K_SYSCALL_DEVICE_INIT] = z_mrsh_device_init,
 	[K_SYSCALL_K_THREAD_STACK_ALLOC] = z_mrsh_k_thread_stack_alloc,
 	[K_SYSCALL_K_THREAD_STACK_FREE] = z_mrsh_k_thread_stack_free,
 	[K_SYSCALL_K_THREAD_CREATE] = z_mrsh_k_thread_create,

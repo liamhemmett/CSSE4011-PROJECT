@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/modules/bsim_hw_models/nrf_hw_models
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/modules/bsim_hw_models/nrf_hw_models
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/zephyr/lib/posix/options/getopt
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/lib/posix/options/getopt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

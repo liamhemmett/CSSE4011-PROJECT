@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/modules/crypto/tinycrypt/lib
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/modules/crypto/tinycrypt/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

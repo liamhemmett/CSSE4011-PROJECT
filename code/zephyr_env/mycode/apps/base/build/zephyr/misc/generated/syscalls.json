@@ -441,6 +441,14 @@
     ],
     [
         [
+            "int device_init",
+            "const struct device *dev"
+        ],
+        "device.h",
+        true
+    ],
+    [
+        [
             "k_thread_stack_t *k_thread_stack_alloc",
             "size_t size, int flags"
         ],
@@ -1473,16 +1481,16 @@
     ],
     [
         [
-            "int can_get_min_bitrate",
-            "const struct device *dev, uint32_t *min_bitrate"
+            "uint32_t can_get_bitrate_min",
+            "const struct device *dev"
         ],
         "can.h",
         false
     ],
     [
         [
-            "int can_get_max_bitrate",
-            "const struct device *dev, uint32_t *max_bitrate"
+            "uint32_t can_get_bitrate_max",
+            "const struct device *dev"
         ],
         "can.h",
         false

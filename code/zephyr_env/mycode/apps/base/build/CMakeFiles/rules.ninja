@@ -278,16 +278,6 @@ rule C_STATIC_LIBRARY_LINKER__lib__posix__options_
 
 
 #############################################
-# Rule for compiling ASM files.
-
-rule ASM_COMPILER__soc__nordic_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ccache /root/zephyr_install/zephyr-sdk-0.16.5/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building ASM object $out
-
-
-#############################################
 # Rule for compiling C files.
 
 rule C_COMPILER__soc__nordic_
@@ -690,7 +680,7 @@ rule C_STATIC_LIBRARY_LINKER__kernel_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/root/csse4011/prac3/mycode/apps/AHU -B/root/csse4011/prac3/mycode/apps/AHU/build
+  command = /usr/bin/cmake --regenerate-during-build -S/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base -B/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build
   description = Re-running CMake...
   generator = 1
 

@@ -1,4 +1,4 @@
-# Install script for directory: /root/csse4011/prac3/modules/debug/mipi-sys-t
+# Install script for directory: /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/modules/debug/mipi-sys-t
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
