@@ -1,14 +1,8 @@
-#include "HCI.h"
-#include "ble.h"
+#include "ir.h"
 
-#include <zephyr/bluetooth/bluetooth.h>
-#include <zephyr/bluetooth/hci.h>
-#include <zephyr/bluetooth/services/hrs.h>
-#include <zephyr/bluetooth/uuid.h>
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
 
-LOG_MODULE_REGISTER(main);
 
 /* size of stack area used by each thread */
 #define STACKSIZE 1024
@@ -24,12 +18,14 @@ K_MSGQ_DEFINE(data_msgq, MSG_SIZE, 20, 4);
  */
 void blue_loop(void) {
   // Initialise bluetooth
-  bt_init();
-  start_scan();
 }
 
 K_THREAD_DEFINE(thread_blue, STACKSIZE, blue_loop, NULL, NULL, NULL, PRIORITY,
                 0, 0);
 extern const k_tid_t thread_blue;
 
-int main(void) { printf("----------------\n"); }
+int main(void) { 
+  printf("hello world\n"); 
+  gpio_init();
+  test();
+}

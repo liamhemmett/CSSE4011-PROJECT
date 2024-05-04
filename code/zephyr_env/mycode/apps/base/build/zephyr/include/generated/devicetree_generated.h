@@ -5,7 +5,7 @@
  *   /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build/zephyr/zephyr.dts.pre
  *
  * Directories with bindings:
- *   $ZEPHYR_BASE/dts/bindings
+ *   /root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/dts/bindings, $ZEPHYR_BASE/dts/bindings
  *
  * Node dependency ordering (ordinal and path):
  *   0   /

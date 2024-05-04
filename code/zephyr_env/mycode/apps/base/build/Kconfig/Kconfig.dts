@@ -2592,6 +2592,11 @@ DT_COMPAT_INVENTEK_ESWIFI_UART := inventek,eswifi-uart
 config DT_HAS_INVENTEK_ESWIFI_UART_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_INVENTEK_ESWIFI_UART))
 
+DT_COMPAT_IR_TRANS := ir_trans
+
+config DT_HAS_IR_TRANS_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_IR_TRANS))
+
 DT_COMPAT_ISENTEK_IST8310 := isentek,ist8310
 
 config DT_HAS_ISENTEK_IST8310_ENABLED

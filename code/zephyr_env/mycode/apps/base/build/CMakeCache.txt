@@ -419,7 +419,7 @@ Zephyr_DIR:PATH=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/s
 //The application configuration folder
 APPLICATION_CONFIG_DIR:INTERNAL=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base
 //DT bindings root directories
-CACHED_DTS_ROOT_BINDINGS:INTERNAL=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/dts/bindings
+CACHED_DTS_ROOT_BINDINGS:INTERNAL=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/dts/bindings;/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/dts/bindings
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
