@@ -36,7 +36,7 @@ extern "C" {
 static const struct device *const uart_dev = DEVICE_DT_GET(UART_SHELL_NODE);
 static const struct device *const uart_pin = DEVICE_DT_GET(UART_PIN_NODE);
 
-struct packet {
+extern struct packet {
   __uint8_t preamble;
   __uint8_t typeSize;
   __uint8_t data[32];

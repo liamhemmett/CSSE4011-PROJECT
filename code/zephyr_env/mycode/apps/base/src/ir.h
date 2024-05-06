@@ -15,10 +15,17 @@ extern "C" {
 
 #define IR_PIN 27
 
+extern struct packet {
+  __uint8_t preambleType;
+  __uint8_t data[32];
+  __uint8_t end;
+};
+
 //#define IR_PIN_NODE DT_NODELABEL(IR_PIN)
 //static const struct device *const gpio_dev = DEVICE_DT_GET(IR_PIN_NODE);
 void gpio_init(void);
 void test(void);
+void send_command(struct packet *payload);
 
 #ifdef __cplusplus
 }

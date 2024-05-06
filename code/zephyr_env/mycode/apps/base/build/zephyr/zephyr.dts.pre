@@ -1201,5 +1201,15 @@ zephyr_udc0: &usbd {
 &uart0 {
      current-speed = <115200>;
 };
+
+
+
+/ {
+ load_switch: load_switch {
+  compatible = "power-switch";
+
+  gpios = <&gpio0 27 (0 << 0)>;
+ };
+};
 # 0 "<command-line>" 2
 # 1 "/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/misc/empty_file.c"

@@ -6,3 +6,13 @@
 &uart0 {
      current-speed = <115200>;
 };
+
+
+
+/ {
+	load_switch: load_switch {
+		compatible = "power-switch";
+                /* using built-in LED pin for demonstration */
+		gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+	};
+};

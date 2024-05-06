@@ -14,15 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Value Computed by CMake
-AHU_BINARY_DIR:STATIC=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build
-
-//Value Computed by CMake
-AHU_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-AHU_SOURCE_DIR:STATIC=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base
-
 //Application Binary Directory
 APPLICATION_BINARY_DIR:PATH=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build
 
@@ -232,7 +223,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=AHU
+CMAKE_PROJECT_NAME:STATIC=base
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=3.6.99
@@ -410,6 +401,15 @@ ZephyrBuildConfiguration_DIR:PATH=ZephyrBuildConfiguration_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Zephyr.
 Zephyr_DIR:PATH=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/share/zephyr-package/cmake
+
+//Value Computed by CMake
+base_BINARY_DIR:STATIC=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base/build
+
+//Value Computed by CMake
+base_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+base_SOURCE_DIR:STATIC=/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/mycode/apps/base
 
 
 ########################
