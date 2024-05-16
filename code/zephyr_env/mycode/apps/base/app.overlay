@@ -7,12 +7,16 @@
      current-speed = <115200>;
 };
 
-
-
 / {
-	load_switch: load_switch {
-		compatible = "power-switch";
-                /* using built-in LED pin for demonstration */
-		gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
-	};
+     aliases {
+          ir = &ir_send;
+     };
+
+     leds {
+          ir_send: ir_send {
+               status = "okay";
+               gpios = <&gpio0 27 (GPIO_PULL_DOWN | GPIO_ACTIVE_LOW)>;
+               label = "IR Transmit Pin";
+          };
+     };
 };

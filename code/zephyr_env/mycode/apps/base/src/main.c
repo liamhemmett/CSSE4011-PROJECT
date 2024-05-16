@@ -1,4 +1,5 @@
 #include "ir.h"
+#include "cam.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
@@ -29,6 +30,5 @@ int main(void) {
   printf("1\n"); 
   gpio_init();
   printf("2\n"); 
-  test();
   printf("done\n"); 
 }

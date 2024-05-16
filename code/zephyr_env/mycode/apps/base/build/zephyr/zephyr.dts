@@ -33,6 +33,7 @@
 		mcuboot-led0 = &led0;
 		watchdog0 = &wdt0;
 		spi-flash0 = &mx25r64;
+		ir = &ir_send;
 	};
 	soc {
 		#address-cells = < 0x1 >;
@@ -744,6 +745,11 @@
 			gpios = < &gpio0 0x10 0x1 >;
 			label = "Green LED 3";
 		};
+		ir_send: ir_send {
+			status = "okay";
+			gpios = < &gpio0 0x1b 0x21 >;
+			label = "IR Transmit Pin";
+		};
 	};
 	pwmleds {
 		compatible = "pwm-leds";
@@ -786,9 +792,5 @@
 		compatible = "arduino,uno-adc";
 		#io-channel-cells = < 0x1 >;
 		io-channel-map = < 0x0 &adc 0x1 >, < 0x1 &adc 0x2 >, < 0x2 &adc 0x4 >, < 0x3 &adc 0x5 >, < 0x4 &adc 0x6 >, < 0x5 &adc 0x7 >;
-	};
-	load_switch: load_switch {
-		compatible = "power-switch";
-		gpios = < &gpio0 0x1b 0x0 >;
 	};
 };
