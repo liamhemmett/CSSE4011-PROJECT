@@ -5,6 +5,7 @@
 
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/gpio.h>
+#include <zephyr/drivers/pwm.h>
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/sys/printk.h>
@@ -22,7 +23,9 @@ struct packet {
 };
 
 void gpio_init(void);
+void ir_transmit(uint8_t data);
 void send_command(struct packet *payload);
+void pwm_init(void);
 
 #ifdef __cplusplus
 }
