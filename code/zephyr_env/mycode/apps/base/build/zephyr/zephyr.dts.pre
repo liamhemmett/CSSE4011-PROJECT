@@ -1215,5 +1215,19 @@ zephyr_udc0: &usbd {
           };
      };
 };
+
+&spi1 {
+     status = "okay";
+     cs-gpios = <&gpio0 18 (1 << 0)>;
+     pinctrl-0 = <&spi2_default>;
+     pinctrl-1 = <&spi2_sleep>;
+     pinctrl-names = "default", "sleep";
+     camera: camera@0 {
+             compatible = "vnd,spi-device";
+             reg = <0>;
+             spi-max-frequency = <1600000>;
+             label = "camera";
+     };
+};
 # 0 "<command-line>" 2
 # 1 "/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/misc/empty_file.c"
