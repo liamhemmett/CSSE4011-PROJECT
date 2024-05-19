@@ -10,10 +10,11 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-const char* ssid = "OtisWifi";
-const char* password = "Otis12399";
-const char* mqtt_server = "mqtt.m5stack.com";
-const char* mqtt_topic = "s4697686/image"; // Topic to publish image data to
+const char* ssid = "infrastructure";
+const char* password = "udDCgaJ9adWM";
+const char* mqtt_server = "csse4011-iot.zones.eait.uq.edu.au"; // IP address of your MQTT broker
+const char* mqtt_topic = "s4697686"; // Topic to publish data to
+static uint8_t data[8160]; 
 IRrecv irrecv(IR_RECEIVER_PIN);
 decode_results results;
 void reconnect() {
@@ -53,30 +54,39 @@ void setup() {
 }
 
 // Function to read IR data and convert it to an image
-int getImageData(uint8_t** imageData) {
-    static uint8_t image[64]; 
+int getImageData() {
+
     decode_results results;
     int i = 0;
     // Initialize the IR receiver
-    M5.Lcd.println("Reading IR data...");
-    while(i < sizeof(image)) {
-        Serial.println("Attempting read");
-        if (irrecv.decode(&results)) {
-            Serial.println(results.value, HEX);
-            M5.Lcd.println(results.value, HEX);
+
+    while(i < sizeof(data)) {
+        if (irrecv.decode()) {
+            uint64_t value = static_cast<uint64_t>(irrecv.decodedIRData.decodedRawData);
+            if (value == 0xFFFFFFFF  ){
+              irrecv.resume();
+               delay(1); 
+              continue;
+            }
+            // Serial.println(value, HEX);
+            //  Serial.print("'");
             
-            // Extract the last two hex digits and convert them to an integer
-            uint8_t byteValue = results.value & 0xFF;
-            image[i++] = byteValue;
+            for(int shift = 0; shift <64; shift+=8){
+              if(i<sizeof(data)){
+                data[i++] = (value >> shift) & 0xFF;
+              } 
+            }
             
+            // Serial.print("-");
             irrecv.resume();
+        }else{
+            // Serial.print(".");
         }
         delay(1); 
     }
-    M5.Lcd.println("IR data read complete");
+    Serial.println("IR data read complete");
 
-    *imageData = image;
-    return sizeof(image);
+    return sizeof(data);
 }
 
 void loop() {
@@ -87,11 +97,14 @@ void loop() {
     }
     client.loop();
 
-    uint8_t* imageData;
-    int imageSize = getImageData(&imageData);
+   
+    int imageSize = getImageData();
+     M5.Lcd.println(imageSize);
+        M5.Lcd.println(imageSize);
 
+           M5.Lcd.println(imageSize);
     if (imageSize > 0) {
-        client.publish(mqtt_topic, imageData, imageSize);
+        client.publish(mqtt_topic, data, imageSize);
         M5.Lcd.println("Image data published");
 
         // Print image data to screen
