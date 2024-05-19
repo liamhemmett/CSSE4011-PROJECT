@@ -1,6 +1,7 @@
 #include "M5Core2.h"
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <IRremote.h>
 
 #define TRIG 32
 #define ECHO 33
@@ -13,7 +14,8 @@ const char* ssid = "OtisWifi";
 const char* password = "Otis12399";
 const char* mqtt_server = "mqtt.m5stack.com";
 const char* mqtt_topic = "s4697686/image"; // Topic to publish image data to
-
+IRrecv irrecv(IR_RECEIVER_PIN);
+decode_results results;
 void reconnect() {
     while (!client.connected()) {
         String clientId = "M5StackClient-";
@@ -32,6 +34,7 @@ void reconnect() {
 void setup() {
     Serial.begin(115200);
     M5.begin();
+    irrecv.enableIRIn();
     WiFi.begin(ssid, password);
     M5.Lcd.setTextSize(2); // Set text size for better readability
     M5.Lcd.println("Connecting to WiFi...");
@@ -51,14 +54,24 @@ void setup() {
 
 // Function to read IR data and convert it to an image
 int getImageData(uint8_t** imageData) {
-    static uint8_t image[64]; // Adjust the size based on the expected image resolution
-
-    // Read IR data from the receiver
+    static uint8_t image[64]; 
+    decode_results results;
+    int i = 0;
+    // Initialize the IR receiver
     M5.Lcd.println("Reading IR data...");
-    for (int i = 0; i < 64; i++) { // Example for an 8x8 image
-        int irValue = analogRead(IR_RECEIVER_PIN); // Read IR value
-        image[i] = map(irValue, 0, 1023, 0, 255); // Convert to grayscale value
-        delay(1); // Small delay to simulate reading different pixels
+    while(i < sizeof(image)) {
+        Serial.println("Attempting read");
+        if (irrecv.decode(&results)) {
+            Serial.println(results.value, HEX);
+            M5.Lcd.println(results.value, HEX);
+            
+            // Extract the last two hex digits and convert them to an integer
+            uint8_t byteValue = results.value & 0xFF;
+            image[i++] = byteValue;
+            
+            irrecv.resume();
+        }
+        delay(1); 
     }
     M5.Lcd.println("IR data read complete");
 
@@ -82,16 +95,16 @@ void loop() {
         M5.Lcd.println("Image data published");
 
         // Print image data to screen
-        M5.Lcd.clear(); // Clear the screen before printing
-        M5.Lcd.setCursor(0, 0);
-        M5.Lcd.println("Image Data:");
-        for (int i = 0; i < 64; i++) {
-            M5.Lcd.print(imageData[i]);
-            M5.Lcd.print(" ");
-            if ((i + 1) % 8 == 0) { // Print a new line after every 8 values
-                M5.Lcd.println();
-            }
-        }
+//        M5.Lcd.clear(); // Clear the screen before printing
+//        M5.Lcd.setCursor(0, 0);
+//        M5.Lcd.println("Image Data:");
+//        for (int i = 0; i < 64; i++) {
+//            M5.Lcd.print(imageData[i]);
+//            M5.Lcd.print(" ");
+//            if ((i + 1) % 8 == 0) { // Print a new line after every 8 values
+//                M5.Lcd.println();
+//            }
+//        }
     } else {
         Serial.println("Failed to get image data");
         M5.Lcd.println("Failed to get image data");
