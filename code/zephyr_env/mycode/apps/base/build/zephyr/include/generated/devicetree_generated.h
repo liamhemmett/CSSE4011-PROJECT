@@ -14,133 +14,138 @@
  *   3   /chosen
  *   4   /connector
  *   5   /entropy_bt_hci
- *   6   /load_switch
- *   7   /soc
- *   8   /soc/interrupt-controller@e000e100
- *   9   /soc/timer@40009000
- *   10  /sw-pwm
- *   11  /soc/gpiote@40006000
- *   12  /soc/gpio@50000000
- *   13  /buttons
- *   14  /buttons/button_0
- *   15  /buttons/button_1
- *   16  /buttons/button_2
- *   17  /buttons/button_3
- *   18  /cpus
- *   19  /cpus/cpu@0
- *   20  /cpus/cpu@0/itm@e0000000
- *   21  /leds
- *   22  /leds/led_0
- *   23  /leds/led_1
- *   24  /leds/led_2
- *   25  /leds/led_3
- *   26  /pin-controller
- *   27  /pin-controller/i2c0_default
- *   28  /pin-controller/i2c0_default/group1
- *   29  /pin-controller/i2c0_sleep
- *   30  /pin-controller/i2c0_sleep/group1
- *   31  /pin-controller/i2c1_default
- *   32  /pin-controller/i2c1_default/group1
- *   33  /pin-controller/i2c1_sleep
- *   34  /pin-controller/i2c1_sleep/group1
- *   35  /pin-controller/pwm0_default
- *   36  /pin-controller/pwm0_default/group1
- *   37  /pin-controller/pwm0_sleep
- *   38  /pin-controller/pwm0_sleep/group1
- *   39  /pin-controller/qspi_default
- *   40  /pin-controller/qspi_default/group1
- *   41  /pin-controller/qspi_sleep
- *   42  /pin-controller/qspi_sleep/group1
- *   43  /pin-controller/qspi_sleep/group2
- *   44  /pin-controller/spi0_default
- *   45  /pin-controller/spi0_default/group1
- *   46  /pin-controller/spi0_sleep
- *   47  /pin-controller/spi0_sleep/group1
- *   48  /pin-controller/spi1_default
- *   49  /pin-controller/spi1_default/group1
- *   50  /pin-controller/spi1_sleep
- *   51  /pin-controller/spi1_sleep/group1
- *   52  /pin-controller/spi2_default
- *   53  /pin-controller/spi2_default/group1
- *   54  /pin-controller/spi2_sleep
- *   55  /pin-controller/spi2_sleep/group1
- *   56  /pin-controller/spi3_default
- *   57  /pin-controller/spi3_default/group1
- *   58  /pin-controller/spi3_sleep
- *   59  /pin-controller/spi3_sleep/group1
- *   60  /pin-controller/uart0_default
- *   61  /pin-controller/uart0_default/group1
- *   62  /pin-controller/uart0_default/group2
- *   63  /pin-controller/uart0_sleep
- *   64  /pin-controller/uart0_sleep/group1
- *   65  /pin-controller/uart1_default
- *   66  /pin-controller/uart1_default/group1
- *   67  /pin-controller/uart1_default/group2
- *   68  /pin-controller/uart1_sleep
- *   69  /pin-controller/uart1_sleep/group1
- *   70  /soc/pwm@4001c000
- *   71  /pwmleds
- *   72  /pwmleds/pwm_led_0
- *   73  /soc/acl@4001e000
- *   74  /soc/adc@40007000
- *   75  /soc/ccm@4000f000
- *   76  /soc/clock@40000000
- *   77  /soc/comparator@40013000
- *   78  /soc/crypto@5002a000
- *   79  /soc/ecb@4000e000
- *   80  /soc/egu@40014000
- *   81  /soc/egu@40015000
- *   82  /soc/egu@40016000
- *   83  /soc/egu@40017000
- *   84  /soc/egu@40018000
- *   85  /soc/egu@40019000
- *   86  /soc/ficr@10000000
- *   87  /soc/i2c@40003000
- *   88  /soc/i2c@40004000
- *   89  /soc/i2s@40025000
- *   90  /soc/memory@20000000
- *   91  /soc/mwu@40020000
- *   92  /soc/nfct@40005000
- *   93  /soc/pdm@4001d000
- *   94  /soc/ppi@4001f000
- *   95  /soc/pwm@40021000
- *   96  /soc/pwm@40022000
- *   97  /soc/pwm@4002d000
- *   98  /soc/qdec@40012000
- *   99  /soc/random@4000d000
- *   100 /soc/rtc@4000b000
- *   101 /soc/rtc@40011000
- *   102 /soc/rtc@40024000
- *   103 /soc/spi@40003000
- *   104 /soc/spi@40004000
- *   105 /soc/spi@40023000
- *   106 /soc/gpio@50000300
- *   107 /soc/spi@4002f000
- *   108 /soc/temp@4000c000
- *   109 /soc/timer@40008000
- *   110 /soc/timer@4000a000
- *   111 /soc/timer@4001a000
- *   112 /soc/timer@4001b000
- *   113 /soc/timer@e000e010
- *   114 /soc/uart@40002000
- *   115 /soc/uart@40028000
- *   116 /soc/uicr@10001000
- *   117 /soc/usbd@40027000
- *   118 /soc/watchdog@40010000
- *   119 /soc/flash-controller@4001e000
- *   120 /soc/flash-controller@4001e000/flash@0
- *   121 /soc/flash-controller@4001e000/flash@0/partitions
- *   122 /soc/flash-controller@4001e000/flash@0/partitions/partition@0
- *   123 /soc/flash-controller@4001e000/flash@0/partitions/partition@c000
- *   124 /soc/flash-controller@4001e000/flash@0/partitions/partition@82000
- *   125 /soc/flash-controller@4001e000/flash@0/partitions/partition@f8000
- *   126 /soc/power@40000000
- *   127 /soc/power@40000000/gpregret1@4000051c
- *   128 /soc/power@40000000/gpregret2@40000520
- *   129 /soc/qspi@40029000
- *   130 /soc/qspi@40029000/mx25r6435f@0
- *   131 /soc/radio@40001000
- *   132 /soc/radio@40001000/ieee802154
+ *   6   /soc
+ *   7   /soc/interrupt-controller@e000e100
+ *   8   /soc/timer@40009000
+ *   9   /sw-pwm
+ *   10  /soc/gpiote@40006000
+ *   11  /soc/gpio@50000000
+ *   12  /buttons
+ *   13  /buttons/button_0
+ *   14  /buttons/button_1
+ *   15  /buttons/button_2
+ *   16  /buttons/button_3
+ *   17  /cpus
+ *   18  /cpus/cpu@0
+ *   19  /cpus/cpu@0/itm@e0000000
+ *   20  /data
+ *   21  /data/aliases
+ *   22  /data/irpwm
+ *   23  /leds
+ *   24  /leds/cs_pin
+ *   25  /leds/ir_send
+ *   26  /leds/led_0
+ *   27  /leds/led_1
+ *   28  /leds/led_2
+ *   29  /leds/led_3
+ *   30  /pin-controller
+ *   31  /pin-controller/i2c0_default
+ *   32  /pin-controller/i2c0_default/group1
+ *   33  /pin-controller/i2c0_sleep
+ *   34  /pin-controller/i2c0_sleep/group1
+ *   35  /pin-controller/i2c1_default
+ *   36  /pin-controller/i2c1_default/group1
+ *   37  /pin-controller/i2c1_sleep
+ *   38  /pin-controller/i2c1_sleep/group1
+ *   39  /pin-controller/pwm0_default
+ *   40  /pin-controller/pwm0_default/group1
+ *   41  /pin-controller/pwm0_sleep
+ *   42  /pin-controller/pwm0_sleep/group1
+ *   43  /pin-controller/qspi_default
+ *   44  /pin-controller/qspi_default/group1
+ *   45  /pin-controller/qspi_sleep
+ *   46  /pin-controller/qspi_sleep/group1
+ *   47  /pin-controller/qspi_sleep/group2
+ *   48  /pin-controller/spi0_default
+ *   49  /pin-controller/spi0_default/group1
+ *   50  /pin-controller/spi0_sleep
+ *   51  /pin-controller/spi0_sleep/group1
+ *   52  /pin-controller/spi1_default
+ *   53  /pin-controller/spi1_default/group1
+ *   54  /pin-controller/spi1_sleep
+ *   55  /pin-controller/spi1_sleep/group1
+ *   56  /pin-controller/spi2_default
+ *   57  /pin-controller/spi2_default/group1
+ *   58  /pin-controller/spi2_sleep
+ *   59  /pin-controller/spi2_sleep/group1
+ *   60  /pin-controller/spi3_default
+ *   61  /pin-controller/spi3_default/group1
+ *   62  /pin-controller/spi3_sleep
+ *   63  /pin-controller/spi3_sleep/group1
+ *   64  /pin-controller/uart0_default
+ *   65  /pin-controller/uart0_default/group1
+ *   66  /pin-controller/uart0_default/group2
+ *   67  /pin-controller/uart0_sleep
+ *   68  /pin-controller/uart0_sleep/group1
+ *   69  /pin-controller/uart1_default
+ *   70  /pin-controller/uart1_default/group1
+ *   71  /pin-controller/uart1_default/group2
+ *   72  /pin-controller/uart1_sleep
+ *   73  /pin-controller/uart1_sleep/group1
+ *   74  /soc/pwm@4001c000
+ *   75  /pwmleds
+ *   76  /pwmleds/pwm_led_0
+ *   77  /soc/acl@4001e000
+ *   78  /soc/adc@40007000
+ *   79  /soc/ccm@4000f000
+ *   80  /soc/clock@40000000
+ *   81  /soc/comparator@40013000
+ *   82  /soc/crypto@5002a000
+ *   83  /soc/ecb@4000e000
+ *   84  /soc/egu@40014000
+ *   85  /soc/egu@40015000
+ *   86  /soc/egu@40016000
+ *   87  /soc/egu@40017000
+ *   88  /soc/egu@40018000
+ *   89  /soc/egu@40019000
+ *   90  /soc/ficr@10000000
+ *   91  /soc/i2c@40003000
+ *   92  /soc/i2c@40004000
+ *   93  /soc/i2s@40025000
+ *   94  /soc/memory@20000000
+ *   95  /soc/mwu@40020000
+ *   96  /soc/nfct@40005000
+ *   97  /soc/pdm@4001d000
+ *   98  /soc/ppi@4001f000
+ *   99  /soc/pwm@40021000
+ *   100 /soc/pwm@40022000
+ *   101 /soc/pwm@4002d000
+ *   102 /soc/qdec@40012000
+ *   103 /soc/random@4000d000
+ *   104 /soc/rtc@4000b000
+ *   105 /soc/rtc@40011000
+ *   106 /soc/rtc@40024000
+ *   107 /soc/spi@40003000
+ *   108 /soc/spi@40023000
+ *   109 /soc/gpio@50000300
+ *   110 /soc/spi@4002f000
+ *   111 /soc/temp@4000c000
+ *   112 /soc/timer@40008000
+ *   113 /soc/timer@4000a000
+ *   114 /soc/timer@4001a000
+ *   115 /soc/timer@4001b000
+ *   116 /soc/timer@e000e010
+ *   117 /soc/uart@40002000
+ *   118 /soc/uart@40028000
+ *   119 /soc/uicr@10001000
+ *   120 /soc/usbd@40027000
+ *   121 /soc/watchdog@40010000
+ *   122 /soc/flash-controller@4001e000
+ *   123 /soc/flash-controller@4001e000/flash@0
+ *   124 /soc/flash-controller@4001e000/flash@0/partitions
+ *   125 /soc/flash-controller@4001e000/flash@0/partitions/partition@0
+ *   126 /soc/flash-controller@4001e000/flash@0/partitions/partition@c000
+ *   127 /soc/flash-controller@4001e000/flash@0/partitions/partition@82000
+ *   128 /soc/flash-controller@4001e000/flash@0/partitions/partition@f8000
+ *   129 /soc/power@40000000
+ *   130 /soc/power@40000000/gpregret1@4000051c
+ *   131 /soc/power@40000000/gpregret2@40000520
+ *   132 /soc/qspi@40029000
+ *   133 /soc/qspi@40029000/mx25r6435f@0
+ *   134 /soc/radio@40001000
+ *   135 /soc/radio@40001000/ieee802154
+ *   136 /soc/spi@40004000
+ *   137 /soc/spi@40004000/camera@0
  *
  * Definitions derived from these nodes in dependency order are next,
  * followed by /chosen nodes.
@@ -162,14 +167,14 @@
 #define DT_N_FULL_NAME "/"
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_FOREACH_CHILD(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_pin_controller) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_sw_pwm) fn(DT_N_S_cpus) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_buttons) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_load_switch)
-#define DT_N_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_sw_pwm) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_load_switch)
-#define DT_N_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_sw_pwm, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_load_switch, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_sw_pwm, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_load_switch, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_pin_controller) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_cpus) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_buttons) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_load_switch)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_load_switch)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_load_switch, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_load_switch, __VA_ARGS__)
+#define DT_N_FOREACH_CHILD(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_pin_controller) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_sw_pwm) fn(DT_N_S_cpus) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_buttons) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_data)
+#define DT_N_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_sw_pwm) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data)
+#define DT_N_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_sw_pwm, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_data, __VA_ARGS__)
+#define DT_N_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_sw_pwm, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data, __VA_ARGS__)
+#define DT_N_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_pin_controller) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_cpus) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_buttons) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_data)
+#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data)
+#define DT_N_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_data, __VA_ARGS__)
+#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_analog_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
 #define DT_N_ORD 0
@@ -185,14 +190,14 @@
 	3, /* /chosen */ \
 	4, /* /connector */ \
 	5, /* /entropy_bt_hci */ \
-	6, /* /load_switch */ \
-	7, /* /soc */ \
-	10, /* /sw-pwm */ \
-	13, /* /buttons */ \
-	18, /* /cpus */ \
-	21, /* /leds */ \
-	26, /* /pin-controller */ \
-	71, /* /pwmleds */
+	6, /* /soc */ \
+	9, /* /sw-pwm */ \
+	12, /* /buttons */ \
+	17, /* /cpus */ \
+	20, /* /data */ \
+	23, /* /leds */ \
+	30, /* /pin-controller */ \
+	75, /* /pwmleds */
 
 /* Existence and alternate IDs: */
 #define DT_N_EXISTS 1
@@ -609,76 +614,6 @@
 #define DT_N_S_entropy_bt_hci_P_zephyr_deferred_init_EXISTS 1
 
 /*
- * Devicetree node: /load_switch
- *
- * Node identifier: DT_N_S_load_switch
- */
-
-/* Node's full path: */
-#define DT_N_S_load_switch_PATH "/load_switch"
-
-/* Node's name with unit-address: */
-#define DT_N_S_load_switch_FULL_NAME "load_switch"
-
-/* Node parent (/) identifier: */
-#define DT_N_S_load_switch_PARENT DT_N
-
-/* Node's index in its parent's list of children: */
-#define DT_N_S_load_switch_CHILD_IDX 12
-
-/* Helper macros for child nodes of this node. */
-#define DT_N_S_load_switch_FOREACH_CHILD(fn) 
-#define DT_N_S_load_switch_FOREACH_CHILD_SEP(fn, sep) 
-#define DT_N_S_load_switch_FOREACH_CHILD_VARGS(fn, ...) 
-#define DT_N_S_load_switch_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
-#define DT_N_S_load_switch_FOREACH_CHILD_STATUS_OKAY(fn) 
-#define DT_N_S_load_switch_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
-#define DT_N_S_load_switch_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
-#define DT_N_S_load_switch_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
-
-/* Node's dependency ordinal: */
-#define DT_N_S_load_switch_ORD 6
-#define DT_N_S_load_switch_ORD_STR_SORTABLE 00006
-
-/* Ordinals for what this node depends on directly: */
-#define DT_N_S_load_switch_REQUIRES_ORDS \
-	0, /* / */
-
-/* Ordinals for what depends directly on this node: */
-#define DT_N_S_load_switch_SUPPORTS_ORDS /* nothing */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_load_switch_EXISTS 1
-#define DT_N_INST_0_power_switch   DT_N_S_load_switch
-#define DT_N_NODELABEL_load_switch DT_N_S_load_switch
-
-/* Macros for properties that are special in the specification: */
-#define DT_N_S_load_switch_REG_NUM 0
-#define DT_N_S_load_switch_RANGES_NUM 0
-#define DT_N_S_load_switch_FOREACH_RANGE(fn) 
-#define DT_N_S_load_switch_IRQ_NUM 0
-#define DT_N_S_load_switch_IRQ_LEVEL 0
-#define DT_N_S_load_switch_COMPAT_MATCHES_power_switch 1
-#define DT_N_S_load_switch_STATUS_okay 1
-
-/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_load_switch_PINCTRL_NUM 0
-
-/* Generic property macros: */
-#define DT_N_S_load_switch_P_compatible {"power-switch"}
-#define DT_N_S_load_switch_P_compatible_IDX_0 "power-switch"
-#define DT_N_S_load_switch_P_compatible_IDX_0_STRING_UNQUOTED power-switch
-#define DT_N_S_load_switch_P_compatible_IDX_0_STRING_TOKEN power_switch
-#define DT_N_S_load_switch_P_compatible_IDX_0_STRING_UPPER_TOKEN POWER_SWITCH
-#define DT_N_S_load_switch_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_load_switch_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_load_switch, compatible, 0)
-#define DT_N_S_load_switch_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_load_switch, compatible, 0)
-#define DT_N_S_load_switch_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_load_switch, compatible, 0, __VA_ARGS__)
-#define DT_N_S_load_switch_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_load_switch, compatible, 0, __VA_ARGS__)
-#define DT_N_S_load_switch_P_compatible_LEN 1
-#define DT_N_S_load_switch_P_compatible_EXISTS 1
-
-/*
  * Devicetree node: /soc
  *
  * Node identifier: DT_N_S_soc
@@ -707,8 +642,8 @@
 #define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_10000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_uicr_10001000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_20000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_clock_40000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_power_40000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_radio_40001000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_uart_40002000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_i2c_40003000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_adc_40007000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_temp_4000c000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_random_4000d000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ecb_4000e000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ccm_4000f000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_watchdog_40010000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40014000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40015000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40016000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40017000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40018000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_egu_40019000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_pwm_4001c000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_acl_4001e000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_flash_controller_4001e000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ppi_4001f000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_mwu_40020000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_usbd_40027000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_uart_40028000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_qspi_40029000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_spi_4002f000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_gpio_50000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_gpio_50000300, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_ORD 7
-#define DT_N_S_soc_ORD_STR_SORTABLE 00007
+#define DT_N_S_soc_ORD 6
+#define DT_N_S_soc_ORD_STR_SORTABLE 00006
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_REQUIRES_ORDS \
@@ -716,61 +651,61 @@
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_SUPPORTS_ORDS \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	9, /* /soc/timer@40009000 */ \
-	11, /* /soc/gpiote@40006000 */ \
-	12, /* /soc/gpio@50000000 */ \
-	70, /* /soc/pwm@4001c000 */ \
-	73, /* /soc/acl@4001e000 */ \
-	74, /* /soc/adc@40007000 */ \
-	75, /* /soc/ccm@4000f000 */ \
-	76, /* /soc/clock@40000000 */ \
-	77, /* /soc/comparator@40013000 */ \
-	78, /* /soc/crypto@5002a000 */ \
-	79, /* /soc/ecb@4000e000 */ \
-	80, /* /soc/egu@40014000 */ \
-	81, /* /soc/egu@40015000 */ \
-	82, /* /soc/egu@40016000 */ \
-	83, /* /soc/egu@40017000 */ \
-	84, /* /soc/egu@40018000 */ \
-	85, /* /soc/egu@40019000 */ \
-	86, /* /soc/ficr@10000000 */ \
-	87, /* /soc/i2c@40003000 */ \
-	88, /* /soc/i2c@40004000 */ \
-	89, /* /soc/i2s@40025000 */ \
-	90, /* /soc/memory@20000000 */ \
-	91, /* /soc/mwu@40020000 */ \
-	92, /* /soc/nfct@40005000 */ \
-	93, /* /soc/pdm@4001d000 */ \
-	94, /* /soc/ppi@4001f000 */ \
-	95, /* /soc/pwm@40021000 */ \
-	96, /* /soc/pwm@40022000 */ \
-	97, /* /soc/pwm@4002d000 */ \
-	98, /* /soc/qdec@40012000 */ \
-	99, /* /soc/random@4000d000 */ \
-	100, /* /soc/rtc@4000b000 */ \
-	101, /* /soc/rtc@40011000 */ \
-	102, /* /soc/rtc@40024000 */ \
-	103, /* /soc/spi@40003000 */ \
-	104, /* /soc/spi@40004000 */ \
-	105, /* /soc/spi@40023000 */ \
-	106, /* /soc/gpio@50000300 */ \
-	107, /* /soc/spi@4002f000 */ \
-	108, /* /soc/temp@4000c000 */ \
-	109, /* /soc/timer@40008000 */ \
-	110, /* /soc/timer@4000a000 */ \
-	111, /* /soc/timer@4001a000 */ \
-	112, /* /soc/timer@4001b000 */ \
-	113, /* /soc/timer@e000e010 */ \
-	114, /* /soc/uart@40002000 */ \
-	115, /* /soc/uart@40028000 */ \
-	116, /* /soc/uicr@10001000 */ \
-	117, /* /soc/usbd@40027000 */ \
-	118, /* /soc/watchdog@40010000 */ \
-	119, /* /soc/flash-controller@4001e000 */ \
-	126, /* /soc/power@40000000 */ \
-	129, /* /soc/qspi@40029000 */ \
-	131, /* /soc/radio@40001000 */
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	8, /* /soc/timer@40009000 */ \
+	10, /* /soc/gpiote@40006000 */ \
+	11, /* /soc/gpio@50000000 */ \
+	74, /* /soc/pwm@4001c000 */ \
+	77, /* /soc/acl@4001e000 */ \
+	78, /* /soc/adc@40007000 */ \
+	79, /* /soc/ccm@4000f000 */ \
+	80, /* /soc/clock@40000000 */ \
+	81, /* /soc/comparator@40013000 */ \
+	82, /* /soc/crypto@5002a000 */ \
+	83, /* /soc/ecb@4000e000 */ \
+	84, /* /soc/egu@40014000 */ \
+	85, /* /soc/egu@40015000 */ \
+	86, /* /soc/egu@40016000 */ \
+	87, /* /soc/egu@40017000 */ \
+	88, /* /soc/egu@40018000 */ \
+	89, /* /soc/egu@40019000 */ \
+	90, /* /soc/ficr@10000000 */ \
+	91, /* /soc/i2c@40003000 */ \
+	92, /* /soc/i2c@40004000 */ \
+	93, /* /soc/i2s@40025000 */ \
+	94, /* /soc/memory@20000000 */ \
+	95, /* /soc/mwu@40020000 */ \
+	96, /* /soc/nfct@40005000 */ \
+	97, /* /soc/pdm@4001d000 */ \
+	98, /* /soc/ppi@4001f000 */ \
+	99, /* /soc/pwm@40021000 */ \
+	100, /* /soc/pwm@40022000 */ \
+	101, /* /soc/pwm@4002d000 */ \
+	102, /* /soc/qdec@40012000 */ \
+	103, /* /soc/random@4000d000 */ \
+	104, /* /soc/rtc@4000b000 */ \
+	105, /* /soc/rtc@40011000 */ \
+	106, /* /soc/rtc@40024000 */ \
+	107, /* /soc/spi@40003000 */ \
+	108, /* /soc/spi@40023000 */ \
+	109, /* /soc/gpio@50000300 */ \
+	110, /* /soc/spi@4002f000 */ \
+	111, /* /soc/temp@4000c000 */ \
+	112, /* /soc/timer@40008000 */ \
+	113, /* /soc/timer@4000a000 */ \
+	114, /* /soc/timer@4001a000 */ \
+	115, /* /soc/timer@4001b000 */ \
+	116, /* /soc/timer@e000e010 */ \
+	117, /* /soc/uart@40002000 */ \
+	118, /* /soc/uart@40028000 */ \
+	119, /* /soc/uicr@10001000 */ \
+	120, /* /soc/usbd@40027000 */ \
+	121, /* /soc/watchdog@40010000 */ \
+	122, /* /soc/flash-controller@4001e000 */ \
+	129, /* /soc/power@40000000 */ \
+	132, /* /soc/qspi@40029000 */ \
+	134, /* /soc/radio@40001000 */ \
+	136, /* /soc/spi@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_EXISTS 1
@@ -883,59 +818,59 @@
 #define DT_N_S_soc_S_interrupt_controller_e000e100_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_interrupt_controller_e000e100_ORD 8
-#define DT_N_S_soc_S_interrupt_controller_e000e100_ORD_STR_SORTABLE 00008
+#define DT_N_S_soc_S_interrupt_controller_e000e100_ORD 7
+#define DT_N_S_soc_S_interrupt_controller_e000e100_ORD_STR_SORTABLE 00007
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_interrupt_controller_e000e100_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_interrupt_controller_e000e100_SUPPORTS_ORDS \
-	9, /* /soc/timer@40009000 */ \
-	11, /* /soc/gpiote@40006000 */ \
-	70, /* /soc/pwm@4001c000 */ \
-	74, /* /soc/adc@40007000 */ \
-	75, /* /soc/ccm@4000f000 */ \
-	76, /* /soc/clock@40000000 */ \
-	77, /* /soc/comparator@40013000 */ \
-	78, /* /soc/crypto@5002a000 */ \
-	79, /* /soc/ecb@4000e000 */ \
-	80, /* /soc/egu@40014000 */ \
-	81, /* /soc/egu@40015000 */ \
-	82, /* /soc/egu@40016000 */ \
-	83, /* /soc/egu@40017000 */ \
-	84, /* /soc/egu@40018000 */ \
-	85, /* /soc/egu@40019000 */ \
-	87, /* /soc/i2c@40003000 */ \
-	88, /* /soc/i2c@40004000 */ \
-	89, /* /soc/i2s@40025000 */ \
-	92, /* /soc/nfct@40005000 */ \
-	93, /* /soc/pdm@4001d000 */ \
-	95, /* /soc/pwm@40021000 */ \
-	96, /* /soc/pwm@40022000 */ \
-	97, /* /soc/pwm@4002d000 */ \
-	98, /* /soc/qdec@40012000 */ \
-	99, /* /soc/random@4000d000 */ \
-	100, /* /soc/rtc@4000b000 */ \
-	101, /* /soc/rtc@40011000 */ \
-	102, /* /soc/rtc@40024000 */ \
-	103, /* /soc/spi@40003000 */ \
-	104, /* /soc/spi@40004000 */ \
-	105, /* /soc/spi@40023000 */ \
-	107, /* /soc/spi@4002f000 */ \
-	108, /* /soc/temp@4000c000 */ \
-	109, /* /soc/timer@40008000 */ \
-	110, /* /soc/timer@4000a000 */ \
-	111, /* /soc/timer@4001a000 */ \
-	112, /* /soc/timer@4001b000 */ \
-	114, /* /soc/uart@40002000 */ \
-	115, /* /soc/uart@40028000 */ \
-	117, /* /soc/usbd@40027000 */ \
-	118, /* /soc/watchdog@40010000 */ \
-	126, /* /soc/power@40000000 */ \
-	129, /* /soc/qspi@40029000 */ \
-	131, /* /soc/radio@40001000 */
+	8, /* /soc/timer@40009000 */ \
+	10, /* /soc/gpiote@40006000 */ \
+	74, /* /soc/pwm@4001c000 */ \
+	78, /* /soc/adc@40007000 */ \
+	79, /* /soc/ccm@4000f000 */ \
+	80, /* /soc/clock@40000000 */ \
+	81, /* /soc/comparator@40013000 */ \
+	82, /* /soc/crypto@5002a000 */ \
+	83, /* /soc/ecb@4000e000 */ \
+	84, /* /soc/egu@40014000 */ \
+	85, /* /soc/egu@40015000 */ \
+	86, /* /soc/egu@40016000 */ \
+	87, /* /soc/egu@40017000 */ \
+	88, /* /soc/egu@40018000 */ \
+	89, /* /soc/egu@40019000 */ \
+	91, /* /soc/i2c@40003000 */ \
+	92, /* /soc/i2c@40004000 */ \
+	93, /* /soc/i2s@40025000 */ \
+	96, /* /soc/nfct@40005000 */ \
+	97, /* /soc/pdm@4001d000 */ \
+	99, /* /soc/pwm@40021000 */ \
+	100, /* /soc/pwm@40022000 */ \
+	101, /* /soc/pwm@4002d000 */ \
+	102, /* /soc/qdec@40012000 */ \
+	103, /* /soc/random@4000d000 */ \
+	104, /* /soc/rtc@4000b000 */ \
+	105, /* /soc/rtc@40011000 */ \
+	106, /* /soc/rtc@40024000 */ \
+	107, /* /soc/spi@40003000 */ \
+	108, /* /soc/spi@40023000 */ \
+	110, /* /soc/spi@4002f000 */ \
+	111, /* /soc/temp@4000c000 */ \
+	112, /* /soc/timer@40008000 */ \
+	113, /* /soc/timer@4000a000 */ \
+	114, /* /soc/timer@4001a000 */ \
+	115, /* /soc/timer@4001b000 */ \
+	117, /* /soc/uart@40002000 */ \
+	118, /* /soc/uart@40028000 */ \
+	120, /* /soc/usbd@40027000 */ \
+	121, /* /soc/watchdog@40010000 */ \
+	129, /* /soc/power@40000000 */ \
+	132, /* /soc/qspi@40029000 */ \
+	134, /* /soc/radio@40001000 */ \
+	136, /* /soc/spi@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_interrupt_controller_e000e100_EXISTS 1
@@ -1026,17 +961,17 @@
 #define DT_N_S_soc_S_timer_40009000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_40009000_ORD 9
-#define DT_N_S_soc_S_timer_40009000_ORD_STR_SORTABLE 00009
+#define DT_N_S_soc_S_timer_40009000_ORD 8
+#define DT_N_S_soc_S_timer_40009000_ORD_STR_SORTABLE 00008
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_40009000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_40009000_SUPPORTS_ORDS \
-	10, /* /sw-pwm */
+	9, /* /sw-pwm */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_timer_40009000_EXISTS 1
@@ -1160,13 +1095,13 @@
 #define DT_N_S_sw_pwm_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_sw_pwm_ORD 10
-#define DT_N_S_sw_pwm_ORD_STR_SORTABLE 00010
+#define DT_N_S_sw_pwm_ORD 9
+#define DT_N_S_sw_pwm_ORD_STR_SORTABLE 00009
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_sw_pwm_REQUIRES_ORDS \
 	0, /* / */ \
-	9, /* /soc/timer@40009000 */
+	8, /* /soc/timer@40009000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_sw_pwm_SUPPORTS_ORDS /* nothing */
@@ -1275,18 +1210,18 @@
 #define DT_N_S_soc_S_gpiote_40006000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_gpiote_40006000_ORD 11
-#define DT_N_S_soc_S_gpiote_40006000_ORD_STR_SORTABLE 00011
+#define DT_N_S_soc_S_gpiote_40006000_ORD 10
+#define DT_N_S_soc_S_gpiote_40006000_ORD_STR_SORTABLE 00010
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_gpiote_40006000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_gpiote_40006000_SUPPORTS_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	106, /* /soc/gpio@50000300 */
+	11, /* /soc/gpio@50000000 */ \
+	109, /* /soc/gpio@50000300 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_gpiote_40006000_EXISTS 1
@@ -1405,26 +1340,28 @@
 #define DT_N_S_soc_S_gpio_50000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_gpio_50000000_ORD 12
-#define DT_N_S_soc_S_gpio_50000000_ORD_STR_SORTABLE 00012
+#define DT_N_S_soc_S_gpio_50000000_ORD 11
+#define DT_N_S_soc_S_gpio_50000000_ORD_STR_SORTABLE 00011
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_gpio_50000000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	11, /* /soc/gpiote@40006000 */
+	6, /* /soc */ \
+	10, /* /soc/gpiote@40006000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_gpio_50000000_SUPPORTS_ORDS \
-	13, /* /buttons */ \
-	14, /* /buttons/button_0 */ \
-	15, /* /buttons/button_1 */ \
-	16, /* /buttons/button_2 */ \
-	17, /* /buttons/button_3 */ \
-	21, /* /leds */ \
-	22, /* /leds/led_0 */ \
-	23, /* /leds/led_1 */ \
-	24, /* /leds/led_2 */ \
-	25, /* /leds/led_3 */
+	12, /* /buttons */ \
+	13, /* /buttons/button_0 */ \
+	14, /* /buttons/button_1 */ \
+	15, /* /buttons/button_2 */ \
+	16, /* /buttons/button_3 */ \
+	23, /* /leds */ \
+	24, /* /leds/cs_pin */ \
+	25, /* /leds/ir_send */ \
+	26, /* /leds/led_0 */ \
+	27, /* /leds/led_1 */ \
+	28, /* /leds/led_2 */ \
+	29, /* /leds/led_3 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_gpio_50000000_EXISTS 1
@@ -1892,20 +1829,20 @@
 #define DT_N_S_buttons_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_buttons_S_button_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons_S_button_1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons_S_button_2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_buttons_S_button_3, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_buttons_ORD 13
-#define DT_N_S_buttons_ORD_STR_SORTABLE 00013
+#define DT_N_S_buttons_ORD 12
+#define DT_N_S_buttons_ORD_STR_SORTABLE 00012
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_buttons_REQUIRES_ORDS \
 	0, /* / */ \
-	12, /* /soc/gpio@50000000 */
+	11, /* /soc/gpio@50000000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_buttons_SUPPORTS_ORDS \
-	14, /* /buttons/button_0 */ \
-	15, /* /buttons/button_1 */ \
-	16, /* /buttons/button_2 */ \
-	17, /* /buttons/button_3 */
+	13, /* /buttons/button_0 */ \
+	14, /* /buttons/button_1 */ \
+	15, /* /buttons/button_2 */ \
+	16, /* /buttons/button_3 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_buttons_EXISTS 1
@@ -1979,13 +1916,13 @@
 #define DT_N_S_buttons_S_button_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_buttons_S_button_0_ORD 14
-#define DT_N_S_buttons_S_button_0_ORD_STR_SORTABLE 00014
+#define DT_N_S_buttons_S_button_0_ORD 13
+#define DT_N_S_buttons_S_button_0_ORD_STR_SORTABLE 00013
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_buttons_S_button_0_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	13, /* /buttons */
+	11, /* /soc/gpio@50000000 */ \
+	12, /* /buttons */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_buttons_S_button_0_SUPPORTS_ORDS /* nothing */
@@ -2067,13 +2004,13 @@
 #define DT_N_S_buttons_S_button_1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_buttons_S_button_1_ORD 15
-#define DT_N_S_buttons_S_button_1_ORD_STR_SORTABLE 00015
+#define DT_N_S_buttons_S_button_1_ORD 14
+#define DT_N_S_buttons_S_button_1_ORD_STR_SORTABLE 00014
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_buttons_S_button_1_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	13, /* /buttons */
+	11, /* /soc/gpio@50000000 */ \
+	12, /* /buttons */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_buttons_S_button_1_SUPPORTS_ORDS /* nothing */
@@ -2154,13 +2091,13 @@
 #define DT_N_S_buttons_S_button_2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_buttons_S_button_2_ORD 16
-#define DT_N_S_buttons_S_button_2_ORD_STR_SORTABLE 00016
+#define DT_N_S_buttons_S_button_2_ORD 15
+#define DT_N_S_buttons_S_button_2_ORD_STR_SORTABLE 00015
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_buttons_S_button_2_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	13, /* /buttons */
+	11, /* /soc/gpio@50000000 */ \
+	12, /* /buttons */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_buttons_S_button_2_SUPPORTS_ORDS /* nothing */
@@ -2241,13 +2178,13 @@
 #define DT_N_S_buttons_S_button_3_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_buttons_S_button_3_ORD 17
-#define DT_N_S_buttons_S_button_3_ORD_STR_SORTABLE 00017
+#define DT_N_S_buttons_S_button_3_ORD 16
+#define DT_N_S_buttons_S_button_3_ORD_STR_SORTABLE 00016
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_buttons_S_button_3_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	13, /* /buttons */
+	11, /* /soc/gpio@50000000 */ \
+	12, /* /buttons */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_buttons_S_button_3_SUPPORTS_ORDS /* nothing */
@@ -2325,8 +2262,8 @@
 #define DT_N_S_cpus_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_cpus_ORD 18
-#define DT_N_S_cpus_ORD_STR_SORTABLE 00018
+#define DT_N_S_cpus_ORD 17
+#define DT_N_S_cpus_ORD_STR_SORTABLE 00017
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_cpus_REQUIRES_ORDS \
@@ -2334,7 +2271,7 @@
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_cpus_SUPPORTS_ORDS \
-	19, /* /cpus/cpu@0 */
+	18, /* /cpus/cpu@0 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_cpus_EXISTS 1
@@ -2387,16 +2324,16 @@
 #define DT_N_S_cpus_S_cpu_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_cpus_S_cpu_0_ORD 19
-#define DT_N_S_cpus_S_cpu_0_ORD_STR_SORTABLE 00019
+#define DT_N_S_cpus_S_cpu_0_ORD 18
+#define DT_N_S_cpus_S_cpu_0_ORD_STR_SORTABLE 00018
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_cpus_S_cpu_0_REQUIRES_ORDS \
-	18, /* /cpus */
+	17, /* /cpus */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_cpus_S_cpu_0_SUPPORTS_ORDS \
-	20, /* /cpus/cpu@0/itm@e0000000 */
+	19, /* /cpus/cpu@0/itm@e0000000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_cpus_S_cpu_0_EXISTS 1
@@ -2479,12 +2416,12 @@
 #define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_ORD 20
-#define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_ORD_STR_SORTABLE 00020
+#define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_ORD 19
+#define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_ORD_STR_SORTABLE 00019
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_REQUIRES_ORDS \
-	19, /* /cpus/cpu@0 */
+	18, /* /cpus/cpu@0 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_SUPPORTS_ORDS /* nothing */
@@ -2542,6 +2479,186 @@
 #define DT_N_S_cpus_S_cpu_0_S_itm_e0000000_P_swo_ref_frequency_EXISTS 1
 
 /*
+ * Devicetree node: /data
+ *
+ * Node identifier: DT_N_S_data
+ */
+
+/* Node's full path: */
+#define DT_N_S_data_PATH "/data"
+
+/* Node's name with unit-address: */
+#define DT_N_S_data_FULL_NAME "data"
+
+/* Node parent (/) identifier: */
+#define DT_N_S_data_PARENT DT_N
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_data_CHILD_IDX 12
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_data_FOREACH_CHILD(fn) fn(DT_N_S_data_S_aliases) fn(DT_N_S_data_S_irpwm)
+#define DT_N_S_data_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_data_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data_S_irpwm)
+#define DT_N_S_data_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_data_S_aliases, __VA_ARGS__) fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
+#define DT_N_S_data_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_data_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
+#define DT_N_S_data_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_data_S_aliases) fn(DT_N_S_data_S_irpwm)
+#define DT_N_S_data_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_data_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data_S_irpwm)
+#define DT_N_S_data_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_data_S_aliases, __VA_ARGS__) fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
+#define DT_N_S_data_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_data_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
+
+/* Node's dependency ordinal: */
+#define DT_N_S_data_ORD 20
+#define DT_N_S_data_ORD_STR_SORTABLE 00020
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_data_REQUIRES_ORDS \
+	0, /* / */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_data_SUPPORTS_ORDS \
+	21, /* /data/aliases */ \
+	22, /* /data/irpwm */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_data_EXISTS 1
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_data_REG_NUM 0
+#define DT_N_S_data_RANGES_NUM 0
+#define DT_N_S_data_FOREACH_RANGE(fn) 
+#define DT_N_S_data_IRQ_NUM 0
+#define DT_N_S_data_IRQ_LEVEL 0
+#define DT_N_S_data_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_data_PINCTRL_NUM 0
+
+/* (No generic property macros) */
+
+/*
+ * Devicetree node: /data/aliases
+ *
+ * Node identifier: DT_N_S_data_S_aliases
+ */
+
+/* Node's full path: */
+#define DT_N_S_data_S_aliases_PATH "/data/aliases"
+
+/* Node's name with unit-address: */
+#define DT_N_S_data_S_aliases_FULL_NAME "aliases"
+
+/* Node parent (/data) identifier: */
+#define DT_N_S_data_S_aliases_PARENT DT_N_S_data
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_data_S_aliases_CHILD_IDX 0
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_data_S_aliases_FOREACH_CHILD(fn) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_data_S_aliases_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+
+/* Node's dependency ordinal: */
+#define DT_N_S_data_S_aliases_ORD 21
+#define DT_N_S_data_S_aliases_ORD_STR_SORTABLE 00021
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_data_S_aliases_REQUIRES_ORDS \
+	20, /* /data */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_data_S_aliases_SUPPORTS_ORDS /* nothing */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_data_S_aliases_EXISTS 1
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_data_S_aliases_REG_NUM 0
+#define DT_N_S_data_S_aliases_RANGES_NUM 0
+#define DT_N_S_data_S_aliases_FOREACH_RANGE(fn) 
+#define DT_N_S_data_S_aliases_IRQ_NUM 0
+#define DT_N_S_data_S_aliases_IRQ_LEVEL 0
+#define DT_N_S_data_S_aliases_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_data_S_aliases_PINCTRL_NUM 0
+
+/* (No generic property macros) */
+
+/*
+ * Devicetree node: /data/irpwm
+ *
+ * Node identifier: DT_N_S_data_S_irpwm
+ */
+
+/* Node's full path: */
+#define DT_N_S_data_S_irpwm_PATH "/data/irpwm"
+
+/* Node's name with unit-address: */
+#define DT_N_S_data_S_irpwm_FULL_NAME "irpwm"
+
+/* Node parent (/data) identifier: */
+#define DT_N_S_data_S_irpwm_PARENT DT_N_S_data
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_data_S_irpwm_CHILD_IDX 1
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD(fn) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_data_S_irpwm_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+
+/* Node's dependency ordinal: */
+#define DT_N_S_data_S_irpwm_ORD 22
+#define DT_N_S_data_S_irpwm_ORD_STR_SORTABLE 00022
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_data_S_irpwm_REQUIRES_ORDS \
+	20, /* /data */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_data_S_irpwm_SUPPORTS_ORDS /* nothing */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_data_S_irpwm_EXISTS 1
+#define DT_N_NODELABEL_irpwm DT_N_S_data_S_irpwm
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_data_S_irpwm_REG_NUM 0
+#define DT_N_S_data_S_irpwm_RANGES_NUM 0
+#define DT_N_S_data_S_irpwm_FOREACH_RANGE(fn) 
+#define DT_N_S_data_S_irpwm_IRQ_NUM 0
+#define DT_N_S_data_S_irpwm_IRQ_LEVEL 0
+#define DT_N_S_data_S_irpwm_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_data_S_irpwm_PINCTRL_NUM 0
+
+/* Generic property macros: */
+#define DT_N_S_data_S_irpwm_P_label "irpwm"
+#define DT_N_S_data_S_irpwm_P_label_STRING_UNQUOTED irpwm
+#define DT_N_S_data_S_irpwm_P_label_STRING_TOKEN irpwm
+#define DT_N_S_data_S_irpwm_P_label_STRING_UPPER_TOKEN IRPWM
+#define DT_N_S_data_S_irpwm_P_label_IDX_0 "irpwm"
+#define DT_N_S_data_S_irpwm_P_label_IDX_0_EXISTS 1
+#define DT_N_S_data_S_irpwm_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_data_S_irpwm, label, 0)
+#define DT_N_S_data_S_irpwm_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_data_S_irpwm, label, 0)
+#define DT_N_S_data_S_irpwm_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_data_S_irpwm, label, 0, __VA_ARGS__)
+#define DT_N_S_data_S_irpwm_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_data_S_irpwm, label, 0, __VA_ARGS__)
+#define DT_N_S_data_S_irpwm_P_label_LEN 1
+#define DT_N_S_data_S_irpwm_P_label_EXISTS 1
+
+/*
  * Devicetree node: /leds
  *
  * Node identifier: DT_N_S_leds
@@ -2566,30 +2683,32 @@
 #define DT_N_S_leds_CHILD_IDX 7
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_S_leds_FOREACH_CHILD(fn) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3)
-#define DT_N_S_leds_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_leds_S_led_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3)
-#define DT_N_S_leds_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__)
-#define DT_N_S_leds_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3, __VA_ARGS__)
-#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3)
-#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_leds_S_led_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3)
-#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__)
-#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3, __VA_ARGS__)
+#define DT_N_S_leds_FOREACH_CHILD(fn) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_leds_S_ir_send) fn(DT_N_S_leds_S_cs_pin)
+#define DT_N_S_leds_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_leds_S_led_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_ir_send) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_cs_pin)
+#define DT_N_S_leds_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__)
+#define DT_N_S_leds_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__)
+#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_leds_S_ir_send) fn(DT_N_S_leds_S_cs_pin)
+#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_leds_S_led_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_ir_send) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_cs_pin)
+#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__)
+#define DT_N_S_leds_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_led_3, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_leds_ORD 21
-#define DT_N_S_leds_ORD_STR_SORTABLE 00021
+#define DT_N_S_leds_ORD 23
+#define DT_N_S_leds_ORD_STR_SORTABLE 00023
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_leds_REQUIRES_ORDS \
 	0, /* / */ \
-	12, /* /soc/gpio@50000000 */
+	11, /* /soc/gpio@50000000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_leds_SUPPORTS_ORDS \
-	22, /* /leds/led_0 */ \
-	23, /* /leds/led_1 */ \
-	24, /* /leds/led_2 */ \
-	25, /* /leds/led_3 */
+	24, /* /leds/cs_pin */ \
+	25, /* /leds/ir_send */ \
+	26, /* /leds/led_0 */ \
+	27, /* /leds/led_1 */ \
+	28, /* /leds/led_2 */ \
+	29, /* /leds/led_3 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_leds_EXISTS 1
@@ -2620,6 +2739,176 @@
 #define DT_N_S_leds_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds, compatible, 0, __VA_ARGS__)
 #define DT_N_S_leds_P_compatible_LEN 1
 #define DT_N_S_leds_P_compatible_EXISTS 1
+
+/*
+ * Devicetree node: /leds/cs_pin
+ *
+ * Node identifier: DT_N_S_leds_S_cs_pin
+ *
+ * (Descriptions have moved to the Devicetree Bindings Index
+ * in the documentation.)
+ */
+
+/* Node's full path: */
+#define DT_N_S_leds_S_cs_pin_PATH "/leds/cs_pin"
+
+/* Node's name with unit-address: */
+#define DT_N_S_leds_S_cs_pin_FULL_NAME "cs_pin"
+
+/* Node parent (/leds) identifier: */
+#define DT_N_S_leds_S_cs_pin_PARENT DT_N_S_leds
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_leds_S_cs_pin_CHILD_IDX 5
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD(fn) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_leds_S_cs_pin_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+
+/* Node's dependency ordinal: */
+#define DT_N_S_leds_S_cs_pin_ORD 24
+#define DT_N_S_leds_S_cs_pin_ORD_STR_SORTABLE 00024
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_leds_S_cs_pin_REQUIRES_ORDS \
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_leds_S_cs_pin_SUPPORTS_ORDS /* nothing */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_leds_S_cs_pin_EXISTS 1
+#define DT_N_ALIAS_cs         DT_N_S_leds_S_cs_pin
+#define DT_N_NODELABEL_cs_pin DT_N_S_leds_S_cs_pin
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_leds_S_cs_pin_REG_NUM 0
+#define DT_N_S_leds_S_cs_pin_RANGES_NUM 0
+#define DT_N_S_leds_S_cs_pin_FOREACH_RANGE(fn) 
+#define DT_N_S_leds_S_cs_pin_IRQ_NUM 0
+#define DT_N_S_leds_S_cs_pin_IRQ_LEVEL 0
+#define DT_N_S_leds_S_cs_pin_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_leds_S_cs_pin_PINCTRL_NUM 0
+
+/* Generic property macros: */
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_EXISTS 1
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_PH DT_N_S_soc_S_gpio_50000000
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_VAL_pin 26
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_VAL_pin_EXISTS 1
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_VAL_flags 32
+#define DT_N_S_leds_S_cs_pin_P_gpios_IDX_0_VAL_flags_EXISTS 1
+#define DT_N_S_leds_S_cs_pin_P_gpios_FOREACH_PROP_ELEM(fn) fn(DT_N_S_leds_S_cs_pin, gpios, 0)
+#define DT_N_S_leds_S_cs_pin_P_gpios_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_leds_S_cs_pin, gpios, 0)
+#define DT_N_S_leds_S_cs_pin_P_gpios_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_leds_S_cs_pin, gpios, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_cs_pin_P_gpios_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_cs_pin, gpios, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_cs_pin_P_gpios_LEN 1
+#define DT_N_S_leds_S_cs_pin_P_gpios_EXISTS 1
+#define DT_N_S_leds_S_cs_pin_P_label "Camera CS Pin"
+#define DT_N_S_leds_S_cs_pin_P_label_STRING_UNQUOTED Camera CS Pin
+#define DT_N_S_leds_S_cs_pin_P_label_STRING_TOKEN Camera_CS_Pin
+#define DT_N_S_leds_S_cs_pin_P_label_STRING_UPPER_TOKEN CAMERA_CS_PIN
+#define DT_N_S_leds_S_cs_pin_P_label_IDX_0 "Camera CS Pin"
+#define DT_N_S_leds_S_cs_pin_P_label_IDX_0_EXISTS 1
+#define DT_N_S_leds_S_cs_pin_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_leds_S_cs_pin, label, 0)
+#define DT_N_S_leds_S_cs_pin_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_leds_S_cs_pin, label, 0)
+#define DT_N_S_leds_S_cs_pin_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_leds_S_cs_pin, label, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_cs_pin_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_cs_pin, label, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_cs_pin_P_label_LEN 1
+#define DT_N_S_leds_S_cs_pin_P_label_EXISTS 1
+
+/*
+ * Devicetree node: /leds/ir_send
+ *
+ * Node identifier: DT_N_S_leds_S_ir_send
+ *
+ * (Descriptions have moved to the Devicetree Bindings Index
+ * in the documentation.)
+ */
+
+/* Node's full path: */
+#define DT_N_S_leds_S_ir_send_PATH "/leds/ir_send"
+
+/* Node's name with unit-address: */
+#define DT_N_S_leds_S_ir_send_FULL_NAME "ir_send"
+
+/* Node parent (/leds) identifier: */
+#define DT_N_S_leds_S_ir_send_PARENT DT_N_S_leds
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_leds_S_ir_send_CHILD_IDX 4
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD(fn) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_leds_S_ir_send_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+
+/* Node's dependency ordinal: */
+#define DT_N_S_leds_S_ir_send_ORD 25
+#define DT_N_S_leds_S_ir_send_ORD_STR_SORTABLE 00025
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_leds_S_ir_send_REQUIRES_ORDS \
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_leds_S_ir_send_SUPPORTS_ORDS /* nothing */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_leds_S_ir_send_EXISTS 1
+#define DT_N_ALIAS_ir          DT_N_S_leds_S_ir_send
+#define DT_N_NODELABEL_ir_send DT_N_S_leds_S_ir_send
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_leds_S_ir_send_REG_NUM 0
+#define DT_N_S_leds_S_ir_send_RANGES_NUM 0
+#define DT_N_S_leds_S_ir_send_FOREACH_RANGE(fn) 
+#define DT_N_S_leds_S_ir_send_IRQ_NUM 0
+#define DT_N_S_leds_S_ir_send_IRQ_LEVEL 0
+#define DT_N_S_leds_S_ir_send_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_leds_S_ir_send_PINCTRL_NUM 0
+
+/* Generic property macros: */
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_EXISTS 1
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_PH DT_N_S_soc_S_gpio_50000000
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_VAL_pin 27
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_VAL_pin_EXISTS 1
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_VAL_flags 32
+#define DT_N_S_leds_S_ir_send_P_gpios_IDX_0_VAL_flags_EXISTS 1
+#define DT_N_S_leds_S_ir_send_P_gpios_FOREACH_PROP_ELEM(fn) fn(DT_N_S_leds_S_ir_send, gpios, 0)
+#define DT_N_S_leds_S_ir_send_P_gpios_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_leds_S_ir_send, gpios, 0)
+#define DT_N_S_leds_S_ir_send_P_gpios_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_leds_S_ir_send, gpios, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_ir_send_P_gpios_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_ir_send, gpios, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_ir_send_P_gpios_LEN 1
+#define DT_N_S_leds_S_ir_send_P_gpios_EXISTS 1
+#define DT_N_S_leds_S_ir_send_P_label "IR Transmit Pin"
+#define DT_N_S_leds_S_ir_send_P_label_STRING_UNQUOTED IR Transmit Pin
+#define DT_N_S_leds_S_ir_send_P_label_STRING_TOKEN IR_Transmit_Pin
+#define DT_N_S_leds_S_ir_send_P_label_STRING_UPPER_TOKEN IR_TRANSMIT_PIN
+#define DT_N_S_leds_S_ir_send_P_label_IDX_0 "IR Transmit Pin"
+#define DT_N_S_leds_S_ir_send_P_label_IDX_0_EXISTS 1
+#define DT_N_S_leds_S_ir_send_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_leds_S_ir_send, label, 0)
+#define DT_N_S_leds_S_ir_send_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_leds_S_ir_send, label, 0)
+#define DT_N_S_leds_S_ir_send_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_leds_S_ir_send, label, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_ir_send_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_leds_S_ir_send, label, 0, __VA_ARGS__)
+#define DT_N_S_leds_S_ir_send_P_label_LEN 1
+#define DT_N_S_leds_S_ir_send_P_label_EXISTS 1
 
 /*
  * Devicetree node: /leds/led_0
@@ -2653,13 +2942,13 @@
 #define DT_N_S_leds_S_led_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_leds_S_led_0_ORD 22
-#define DT_N_S_leds_S_led_0_ORD_STR_SORTABLE 00022
+#define DT_N_S_leds_S_led_0_ORD 26
+#define DT_N_S_leds_S_led_0_ORD_STR_SORTABLE 00026
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_leds_S_led_0_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	21, /* /leds */
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_leds_S_led_0_SUPPORTS_ORDS /* nothing */
@@ -2740,13 +3029,13 @@
 #define DT_N_S_leds_S_led_1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_leds_S_led_1_ORD 23
-#define DT_N_S_leds_S_led_1_ORD_STR_SORTABLE 00023
+#define DT_N_S_leds_S_led_1_ORD 27
+#define DT_N_S_leds_S_led_1_ORD_STR_SORTABLE 00027
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_leds_S_led_1_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	21, /* /leds */
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_leds_S_led_1_SUPPORTS_ORDS /* nothing */
@@ -2825,13 +3114,13 @@
 #define DT_N_S_leds_S_led_2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_leds_S_led_2_ORD 24
-#define DT_N_S_leds_S_led_2_ORD_STR_SORTABLE 00024
+#define DT_N_S_leds_S_led_2_ORD 28
+#define DT_N_S_leds_S_led_2_ORD_STR_SORTABLE 00028
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_leds_S_led_2_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	21, /* /leds */
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_leds_S_led_2_SUPPORTS_ORDS /* nothing */
@@ -2910,13 +3199,13 @@
 #define DT_N_S_leds_S_led_3_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_leds_S_led_3_ORD 25
-#define DT_N_S_leds_S_led_3_ORD_STR_SORTABLE 00025
+#define DT_N_S_leds_S_led_3_ORD 29
+#define DT_N_S_leds_S_led_3_ORD_STR_SORTABLE 00029
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_leds_S_led_3_REQUIRES_ORDS \
-	12, /* /soc/gpio@50000000 */ \
-	21, /* /leds */
+	11, /* /soc/gpio@50000000 */ \
+	23, /* /leds */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_leds_S_led_3_SUPPORTS_ORDS /* nothing */
@@ -2998,8 +3287,8 @@
 #define DT_N_S_pin_controller_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_uart0_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_uart0_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_uart1_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_uart1_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_i2c0_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_i2c0_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_i2c1_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_i2c1_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_pwm0_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_pwm0_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi0_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi0_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi1_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi1_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi2_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi2_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_qspi_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_qspi_sleep, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi3_default, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_spi3_sleep, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_ORD 26
-#define DT_N_S_pin_controller_ORD_STR_SORTABLE 00026
+#define DT_N_S_pin_controller_ORD 30
+#define DT_N_S_pin_controller_ORD_STR_SORTABLE 00030
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_REQUIRES_ORDS \
@@ -3007,26 +3296,26 @@
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_SUPPORTS_ORDS \
-	27, /* /pin-controller/i2c0_default */ \
-	29, /* /pin-controller/i2c0_sleep */ \
-	31, /* /pin-controller/i2c1_default */ \
-	33, /* /pin-controller/i2c1_sleep */ \
-	35, /* /pin-controller/pwm0_default */ \
-	37, /* /pin-controller/pwm0_sleep */ \
-	39, /* /pin-controller/qspi_default */ \
-	41, /* /pin-controller/qspi_sleep */ \
-	44, /* /pin-controller/spi0_default */ \
-	46, /* /pin-controller/spi0_sleep */ \
-	48, /* /pin-controller/spi1_default */ \
-	50, /* /pin-controller/spi1_sleep */ \
-	52, /* /pin-controller/spi2_default */ \
-	54, /* /pin-controller/spi2_sleep */ \
-	56, /* /pin-controller/spi3_default */ \
-	58, /* /pin-controller/spi3_sleep */ \
-	60, /* /pin-controller/uart0_default */ \
-	63, /* /pin-controller/uart0_sleep */ \
-	65, /* /pin-controller/uart1_default */ \
-	68, /* /pin-controller/uart1_sleep */
+	31, /* /pin-controller/i2c0_default */ \
+	33, /* /pin-controller/i2c0_sleep */ \
+	35, /* /pin-controller/i2c1_default */ \
+	37, /* /pin-controller/i2c1_sleep */ \
+	39, /* /pin-controller/pwm0_default */ \
+	41, /* /pin-controller/pwm0_sleep */ \
+	43, /* /pin-controller/qspi_default */ \
+	45, /* /pin-controller/qspi_sleep */ \
+	48, /* /pin-controller/spi0_default */ \
+	50, /* /pin-controller/spi0_sleep */ \
+	52, /* /pin-controller/spi1_default */ \
+	54, /* /pin-controller/spi1_sleep */ \
+	56, /* /pin-controller/spi2_default */ \
+	58, /* /pin-controller/spi2_sleep */ \
+	60, /* /pin-controller/spi3_default */ \
+	62, /* /pin-controller/spi3_sleep */ \
+	64, /* /pin-controller/uart0_default */ \
+	67, /* /pin-controller/uart0_sleep */ \
+	69, /* /pin-controller/uart1_default */ \
+	72, /* /pin-controller/uart1_sleep */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_EXISTS 1
@@ -3101,17 +3390,17 @@
 #define DT_N_S_pin_controller_S_i2c0_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c0_default_ORD 27
-#define DT_N_S_pin_controller_S_i2c0_default_ORD_STR_SORTABLE 00027
+#define DT_N_S_pin_controller_S_i2c0_default_ORD 31
+#define DT_N_S_pin_controller_S_i2c0_default_ORD_STR_SORTABLE 00031
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c0_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c0_default_SUPPORTS_ORDS \
-	28, /* /pin-controller/i2c0_default/group1 */ \
-	87, /* /soc/i2c@40003000 */
+	32, /* /pin-controller/i2c0_default/group1 */ \
+	91, /* /soc/i2c@40003000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_i2c0_default_EXISTS 1
@@ -3162,12 +3451,12 @@
 #define DT_N_S_pin_controller_S_i2c0_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c0_default_S_group1_ORD 28
-#define DT_N_S_pin_controller_S_i2c0_default_S_group1_ORD_STR_SORTABLE 00028
+#define DT_N_S_pin_controller_S_i2c0_default_S_group1_ORD 32
+#define DT_N_S_pin_controller_S_i2c0_default_S_group1_ORD_STR_SORTABLE 00032
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c0_default_S_group1_REQUIRES_ORDS \
-	27, /* /pin-controller/i2c0_default */
+	31, /* /pin-controller/i2c0_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c0_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3247,17 +3536,17 @@
 #define DT_N_S_pin_controller_S_i2c0_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c0_sleep_ORD 29
-#define DT_N_S_pin_controller_S_i2c0_sleep_ORD_STR_SORTABLE 00029
+#define DT_N_S_pin_controller_S_i2c0_sleep_ORD 33
+#define DT_N_S_pin_controller_S_i2c0_sleep_ORD_STR_SORTABLE 00033
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c0_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c0_sleep_SUPPORTS_ORDS \
-	30, /* /pin-controller/i2c0_sleep/group1 */ \
-	87, /* /soc/i2c@40003000 */
+	34, /* /pin-controller/i2c0_sleep/group1 */ \
+	91, /* /soc/i2c@40003000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_i2c0_sleep_EXISTS 1
@@ -3308,12 +3597,12 @@
 #define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_ORD 30
-#define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_ORD_STR_SORTABLE 00030
+#define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_ORD 34
+#define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_ORD_STR_SORTABLE 00034
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_REQUIRES_ORDS \
-	29, /* /pin-controller/i2c0_sleep */
+	33, /* /pin-controller/i2c0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c0_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3393,17 +3682,17 @@
 #define DT_N_S_pin_controller_S_i2c1_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c1_default_ORD 31
-#define DT_N_S_pin_controller_S_i2c1_default_ORD_STR_SORTABLE 00031
+#define DT_N_S_pin_controller_S_i2c1_default_ORD 35
+#define DT_N_S_pin_controller_S_i2c1_default_ORD_STR_SORTABLE 00035
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c1_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c1_default_SUPPORTS_ORDS \
-	32, /* /pin-controller/i2c1_default/group1 */ \
-	88, /* /soc/i2c@40004000 */
+	36, /* /pin-controller/i2c1_default/group1 */ \
+	92, /* /soc/i2c@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_i2c1_default_EXISTS 1
@@ -3454,12 +3743,12 @@
 #define DT_N_S_pin_controller_S_i2c1_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c1_default_S_group1_ORD 32
-#define DT_N_S_pin_controller_S_i2c1_default_S_group1_ORD_STR_SORTABLE 00032
+#define DT_N_S_pin_controller_S_i2c1_default_S_group1_ORD 36
+#define DT_N_S_pin_controller_S_i2c1_default_S_group1_ORD_STR_SORTABLE 00036
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c1_default_S_group1_REQUIRES_ORDS \
-	31, /* /pin-controller/i2c1_default */
+	35, /* /pin-controller/i2c1_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c1_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3539,17 +3828,17 @@
 #define DT_N_S_pin_controller_S_i2c1_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c1_sleep_ORD 33
-#define DT_N_S_pin_controller_S_i2c1_sleep_ORD_STR_SORTABLE 00033
+#define DT_N_S_pin_controller_S_i2c1_sleep_ORD 37
+#define DT_N_S_pin_controller_S_i2c1_sleep_ORD_STR_SORTABLE 00037
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c1_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c1_sleep_SUPPORTS_ORDS \
-	34, /* /pin-controller/i2c1_sleep/group1 */ \
-	88, /* /soc/i2c@40004000 */
+	38, /* /pin-controller/i2c1_sleep/group1 */ \
+	92, /* /soc/i2c@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_i2c1_sleep_EXISTS 1
@@ -3600,12 +3889,12 @@
 #define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_ORD 34
-#define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_ORD_STR_SORTABLE 00034
+#define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_ORD 38
+#define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_ORD_STR_SORTABLE 00038
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_REQUIRES_ORDS \
-	33, /* /pin-controller/i2c1_sleep */
+	37, /* /pin-controller/i2c1_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_i2c1_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3685,17 +3974,17 @@
 #define DT_N_S_pin_controller_S_pwm0_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_pwm0_default_ORD 35
-#define DT_N_S_pin_controller_S_pwm0_default_ORD_STR_SORTABLE 00035
+#define DT_N_S_pin_controller_S_pwm0_default_ORD 39
+#define DT_N_S_pin_controller_S_pwm0_default_ORD_STR_SORTABLE 00039
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_pwm0_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_pwm0_default_SUPPORTS_ORDS \
-	36, /* /pin-controller/pwm0_default/group1 */ \
-	70, /* /soc/pwm@4001c000 */
+	40, /* /pin-controller/pwm0_default/group1 */ \
+	74, /* /soc/pwm@4001c000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_pwm0_default_EXISTS 1
@@ -3746,12 +4035,12 @@
 #define DT_N_S_pin_controller_S_pwm0_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_pwm0_default_S_group1_ORD 36
-#define DT_N_S_pin_controller_S_pwm0_default_S_group1_ORD_STR_SORTABLE 00036
+#define DT_N_S_pin_controller_S_pwm0_default_S_group1_ORD 40
+#define DT_N_S_pin_controller_S_pwm0_default_S_group1_ORD_STR_SORTABLE 00040
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_pwm0_default_S_group1_REQUIRES_ORDS \
-	35, /* /pin-controller/pwm0_default */
+	39, /* /pin-controller/pwm0_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_pwm0_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3825,17 +4114,17 @@
 #define DT_N_S_pin_controller_S_pwm0_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_pwm0_sleep_ORD 37
-#define DT_N_S_pin_controller_S_pwm0_sleep_ORD_STR_SORTABLE 00037
+#define DT_N_S_pin_controller_S_pwm0_sleep_ORD 41
+#define DT_N_S_pin_controller_S_pwm0_sleep_ORD_STR_SORTABLE 00041
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_pwm0_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_pwm0_sleep_SUPPORTS_ORDS \
-	38, /* /pin-controller/pwm0_sleep/group1 */ \
-	70, /* /soc/pwm@4001c000 */
+	42, /* /pin-controller/pwm0_sleep/group1 */ \
+	74, /* /soc/pwm@4001c000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_pwm0_sleep_EXISTS 1
@@ -3886,12 +4175,12 @@
 #define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_ORD 38
-#define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_ORD_STR_SORTABLE 00038
+#define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_ORD 42
+#define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_ORD_STR_SORTABLE 00042
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_REQUIRES_ORDS \
-	37, /* /pin-controller/pwm0_sleep */
+	41, /* /pin-controller/pwm0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_pwm0_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -3965,17 +4254,17 @@
 #define DT_N_S_pin_controller_S_qspi_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_qspi_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_qspi_default_ORD 39
-#define DT_N_S_pin_controller_S_qspi_default_ORD_STR_SORTABLE 00039
+#define DT_N_S_pin_controller_S_qspi_default_ORD 43
+#define DT_N_S_pin_controller_S_qspi_default_ORD_STR_SORTABLE 00043
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_qspi_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_qspi_default_SUPPORTS_ORDS \
-	40, /* /pin-controller/qspi_default/group1 */ \
-	129, /* /soc/qspi@40029000 */
+	44, /* /pin-controller/qspi_default/group1 */ \
+	132, /* /soc/qspi@40029000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_qspi_default_EXISTS 1
@@ -4026,12 +4315,12 @@
 #define DT_N_S_pin_controller_S_qspi_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_qspi_default_S_group1_ORD 40
-#define DT_N_S_pin_controller_S_qspi_default_S_group1_ORD_STR_SORTABLE 00040
+#define DT_N_S_pin_controller_S_qspi_default_S_group1_ORD 44
+#define DT_N_S_pin_controller_S_qspi_default_S_group1_ORD_STR_SORTABLE 00044
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_qspi_default_S_group1_REQUIRES_ORDS \
-	39, /* /pin-controller/qspi_default */
+	43, /* /pin-controller/qspi_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_qspi_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4135,18 +4424,18 @@
 #define DT_N_S_pin_controller_S_qspi_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_qspi_sleep_ORD 41
-#define DT_N_S_pin_controller_S_qspi_sleep_ORD_STR_SORTABLE 00041
+#define DT_N_S_pin_controller_S_qspi_sleep_ORD 45
+#define DT_N_S_pin_controller_S_qspi_sleep_ORD_STR_SORTABLE 00045
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_qspi_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_qspi_sleep_SUPPORTS_ORDS \
-	42, /* /pin-controller/qspi_sleep/group1 */ \
-	43, /* /pin-controller/qspi_sleep/group2 */ \
-	129, /* /soc/qspi@40029000 */
+	46, /* /pin-controller/qspi_sleep/group1 */ \
+	47, /* /pin-controller/qspi_sleep/group2 */ \
+	132, /* /soc/qspi@40029000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_qspi_sleep_EXISTS 1
@@ -4197,12 +4486,12 @@
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_qspi_sleep_S_group1_ORD 42
-#define DT_N_S_pin_controller_S_qspi_sleep_S_group1_ORD_STR_SORTABLE 00042
+#define DT_N_S_pin_controller_S_qspi_sleep_S_group1_ORD 46
+#define DT_N_S_pin_controller_S_qspi_sleep_S_group1_ORD_STR_SORTABLE 00046
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group1_REQUIRES_ORDS \
-	41, /* /pin-controller/qspi_sleep */
+	45, /* /pin-controller/qspi_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4300,12 +4589,12 @@
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_qspi_sleep_S_group2_ORD 43
-#define DT_N_S_pin_controller_S_qspi_sleep_S_group2_ORD_STR_SORTABLE 00043
+#define DT_N_S_pin_controller_S_qspi_sleep_S_group2_ORD 47
+#define DT_N_S_pin_controller_S_qspi_sleep_S_group2_ORD_STR_SORTABLE 00047
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group2_REQUIRES_ORDS \
-	41, /* /pin-controller/qspi_sleep */
+	45, /* /pin-controller/qspi_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_qspi_sleep_S_group2_SUPPORTS_ORDS /* nothing */
@@ -4379,17 +4668,17 @@
 #define DT_N_S_pin_controller_S_spi0_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi0_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi0_default_ORD 44
-#define DT_N_S_pin_controller_S_spi0_default_ORD_STR_SORTABLE 00044
+#define DT_N_S_pin_controller_S_spi0_default_ORD 48
+#define DT_N_S_pin_controller_S_spi0_default_ORD_STR_SORTABLE 00048
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi0_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi0_default_SUPPORTS_ORDS \
-	45, /* /pin-controller/spi0_default/group1 */ \
-	103, /* /soc/spi@40003000 */
+	49, /* /pin-controller/spi0_default/group1 */ \
+	107, /* /soc/spi@40003000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi0_default_EXISTS 1
@@ -4440,12 +4729,12 @@
 #define DT_N_S_pin_controller_S_spi0_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi0_default_S_group1_ORD 45
-#define DT_N_S_pin_controller_S_spi0_default_S_group1_ORD_STR_SORTABLE 00045
+#define DT_N_S_pin_controller_S_spi0_default_S_group1_ORD 49
+#define DT_N_S_pin_controller_S_spi0_default_S_group1_ORD_STR_SORTABLE 00049
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi0_default_S_group1_REQUIRES_ORDS \
-	44, /* /pin-controller/spi0_default */
+	48, /* /pin-controller/spi0_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi0_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4531,17 +4820,17 @@
 #define DT_N_S_pin_controller_S_spi0_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi0_sleep_ORD 46
-#define DT_N_S_pin_controller_S_spi0_sleep_ORD_STR_SORTABLE 00046
+#define DT_N_S_pin_controller_S_spi0_sleep_ORD 50
+#define DT_N_S_pin_controller_S_spi0_sleep_ORD_STR_SORTABLE 00050
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi0_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi0_sleep_SUPPORTS_ORDS \
-	47, /* /pin-controller/spi0_sleep/group1 */ \
-	103, /* /soc/spi@40003000 */
+	51, /* /pin-controller/spi0_sleep/group1 */ \
+	107, /* /soc/spi@40003000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi0_sleep_EXISTS 1
@@ -4592,12 +4881,12 @@
 #define DT_N_S_pin_controller_S_spi0_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi0_sleep_S_group1_ORD 47
-#define DT_N_S_pin_controller_S_spi0_sleep_S_group1_ORD_STR_SORTABLE 00047
+#define DT_N_S_pin_controller_S_spi0_sleep_S_group1_ORD 51
+#define DT_N_S_pin_controller_S_spi0_sleep_S_group1_ORD_STR_SORTABLE 00051
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi0_sleep_S_group1_REQUIRES_ORDS \
-	46, /* /pin-controller/spi0_sleep */
+	50, /* /pin-controller/spi0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi0_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4683,17 +4972,16 @@
 #define DT_N_S_pin_controller_S_spi1_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi1_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi1_default_ORD 48
-#define DT_N_S_pin_controller_S_spi1_default_ORD_STR_SORTABLE 00048
+#define DT_N_S_pin_controller_S_spi1_default_ORD 52
+#define DT_N_S_pin_controller_S_spi1_default_ORD_STR_SORTABLE 00052
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi1_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi1_default_SUPPORTS_ORDS \
-	49, /* /pin-controller/spi1_default/group1 */ \
-	104, /* /soc/spi@40004000 */
+	53, /* /pin-controller/spi1_default/group1 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi1_default_EXISTS 1
@@ -4744,12 +5032,12 @@
 #define DT_N_S_pin_controller_S_spi1_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi1_default_S_group1_ORD 49
-#define DT_N_S_pin_controller_S_spi1_default_S_group1_ORD_STR_SORTABLE 00049
+#define DT_N_S_pin_controller_S_spi1_default_S_group1_ORD 53
+#define DT_N_S_pin_controller_S_spi1_default_S_group1_ORD_STR_SORTABLE 00053
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi1_default_S_group1_REQUIRES_ORDS \
-	48, /* /pin-controller/spi1_default */
+	52, /* /pin-controller/spi1_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi1_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4835,17 +5123,16 @@
 #define DT_N_S_pin_controller_S_spi1_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi1_sleep_ORD 50
-#define DT_N_S_pin_controller_S_spi1_sleep_ORD_STR_SORTABLE 00050
+#define DT_N_S_pin_controller_S_spi1_sleep_ORD 54
+#define DT_N_S_pin_controller_S_spi1_sleep_ORD_STR_SORTABLE 00054
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi1_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi1_sleep_SUPPORTS_ORDS \
-	51, /* /pin-controller/spi1_sleep/group1 */ \
-	104, /* /soc/spi@40004000 */
+	55, /* /pin-controller/spi1_sleep/group1 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi1_sleep_EXISTS 1
@@ -4896,12 +5183,12 @@
 #define DT_N_S_pin_controller_S_spi1_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi1_sleep_S_group1_ORD 51
-#define DT_N_S_pin_controller_S_spi1_sleep_S_group1_ORD_STR_SORTABLE 00051
+#define DT_N_S_pin_controller_S_spi1_sleep_S_group1_ORD 55
+#define DT_N_S_pin_controller_S_spi1_sleep_S_group1_ORD_STR_SORTABLE 00055
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi1_sleep_S_group1_REQUIRES_ORDS \
-	50, /* /pin-controller/spi1_sleep */
+	54, /* /pin-controller/spi1_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi1_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -4987,17 +5274,18 @@
 #define DT_N_S_pin_controller_S_spi2_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi2_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi2_default_ORD 52
-#define DT_N_S_pin_controller_S_spi2_default_ORD_STR_SORTABLE 00052
+#define DT_N_S_pin_controller_S_spi2_default_ORD 56
+#define DT_N_S_pin_controller_S_spi2_default_ORD_STR_SORTABLE 00056
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi2_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi2_default_SUPPORTS_ORDS \
-	53, /* /pin-controller/spi2_default/group1 */ \
-	105, /* /soc/spi@40023000 */
+	57, /* /pin-controller/spi2_default/group1 */ \
+	108, /* /soc/spi@40023000 */ \
+	136, /* /soc/spi@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi2_default_EXISTS 1
@@ -5048,12 +5336,12 @@
 #define DT_N_S_pin_controller_S_spi2_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi2_default_S_group1_ORD 53
-#define DT_N_S_pin_controller_S_spi2_default_S_group1_ORD_STR_SORTABLE 00053
+#define DT_N_S_pin_controller_S_spi2_default_S_group1_ORD 57
+#define DT_N_S_pin_controller_S_spi2_default_S_group1_ORD_STR_SORTABLE 00057
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi2_default_S_group1_REQUIRES_ORDS \
-	52, /* /pin-controller/spi2_default */
+	56, /* /pin-controller/spi2_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi2_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5139,17 +5427,18 @@
 #define DT_N_S_pin_controller_S_spi2_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi2_sleep_ORD 54
-#define DT_N_S_pin_controller_S_spi2_sleep_ORD_STR_SORTABLE 00054
+#define DT_N_S_pin_controller_S_spi2_sleep_ORD 58
+#define DT_N_S_pin_controller_S_spi2_sleep_ORD_STR_SORTABLE 00058
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi2_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi2_sleep_SUPPORTS_ORDS \
-	55, /* /pin-controller/spi2_sleep/group1 */ \
-	105, /* /soc/spi@40023000 */
+	59, /* /pin-controller/spi2_sleep/group1 */ \
+	108, /* /soc/spi@40023000 */ \
+	136, /* /soc/spi@40004000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi2_sleep_EXISTS 1
@@ -5200,12 +5489,12 @@
 #define DT_N_S_pin_controller_S_spi2_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi2_sleep_S_group1_ORD 55
-#define DT_N_S_pin_controller_S_spi2_sleep_S_group1_ORD_STR_SORTABLE 00055
+#define DT_N_S_pin_controller_S_spi2_sleep_S_group1_ORD 59
+#define DT_N_S_pin_controller_S_spi2_sleep_S_group1_ORD_STR_SORTABLE 00059
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi2_sleep_S_group1_REQUIRES_ORDS \
-	54, /* /pin-controller/spi2_sleep */
+	58, /* /pin-controller/spi2_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi2_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5291,17 +5580,17 @@
 #define DT_N_S_pin_controller_S_spi3_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi3_default_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi3_default_ORD 56
-#define DT_N_S_pin_controller_S_spi3_default_ORD_STR_SORTABLE 00056
+#define DT_N_S_pin_controller_S_spi3_default_ORD 60
+#define DT_N_S_pin_controller_S_spi3_default_ORD_STR_SORTABLE 00060
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi3_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi3_default_SUPPORTS_ORDS \
-	57, /* /pin-controller/spi3_default/group1 */ \
-	107, /* /soc/spi@4002f000 */
+	61, /* /pin-controller/spi3_default/group1 */ \
+	110, /* /soc/spi@4002f000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi3_default_EXISTS 1
@@ -5352,12 +5641,12 @@
 #define DT_N_S_pin_controller_S_spi3_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi3_default_S_group1_ORD 57
-#define DT_N_S_pin_controller_S_spi3_default_S_group1_ORD_STR_SORTABLE 00057
+#define DT_N_S_pin_controller_S_spi3_default_S_group1_ORD 61
+#define DT_N_S_pin_controller_S_spi3_default_S_group1_ORD_STR_SORTABLE 00061
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi3_default_S_group1_REQUIRES_ORDS \
-	56, /* /pin-controller/spi3_default */
+	60, /* /pin-controller/spi3_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi3_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5443,17 +5732,17 @@
 #define DT_N_S_pin_controller_S_spi3_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi3_sleep_ORD 58
-#define DT_N_S_pin_controller_S_spi3_sleep_ORD_STR_SORTABLE 00058
+#define DT_N_S_pin_controller_S_spi3_sleep_ORD 62
+#define DT_N_S_pin_controller_S_spi3_sleep_ORD_STR_SORTABLE 00062
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi3_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi3_sleep_SUPPORTS_ORDS \
-	59, /* /pin-controller/spi3_sleep/group1 */ \
-	107, /* /soc/spi@4002f000 */
+	63, /* /pin-controller/spi3_sleep/group1 */ \
+	110, /* /soc/spi@4002f000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_spi3_sleep_EXISTS 1
@@ -5504,12 +5793,12 @@
 #define DT_N_S_pin_controller_S_spi3_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_spi3_sleep_S_group1_ORD 59
-#define DT_N_S_pin_controller_S_spi3_sleep_S_group1_ORD_STR_SORTABLE 00059
+#define DT_N_S_pin_controller_S_spi3_sleep_S_group1_ORD 63
+#define DT_N_S_pin_controller_S_spi3_sleep_S_group1_ORD_STR_SORTABLE 00063
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_spi3_sleep_S_group1_REQUIRES_ORDS \
-	58, /* /pin-controller/spi3_sleep */
+	62, /* /pin-controller/spi3_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_spi3_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5595,18 +5884,18 @@
 #define DT_N_S_pin_controller_S_uart0_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_uart0_default_S_group1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_uart0_default_S_group2, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart0_default_ORD 60
-#define DT_N_S_pin_controller_S_uart0_default_ORD_STR_SORTABLE 00060
+#define DT_N_S_pin_controller_S_uart0_default_ORD 64
+#define DT_N_S_pin_controller_S_uart0_default_ORD_STR_SORTABLE 00064
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart0_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart0_default_SUPPORTS_ORDS \
-	61, /* /pin-controller/uart0_default/group1 */ \
-	62, /* /pin-controller/uart0_default/group2 */ \
-	114, /* /soc/uart@40002000 */
+	65, /* /pin-controller/uart0_default/group1 */ \
+	66, /* /pin-controller/uart0_default/group2 */ \
+	117, /* /soc/uart@40002000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_uart0_default_EXISTS 1
@@ -5657,12 +5946,12 @@
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart0_default_S_group1_ORD 61
-#define DT_N_S_pin_controller_S_uart0_default_S_group1_ORD_STR_SORTABLE 00061
+#define DT_N_S_pin_controller_S_uart0_default_S_group1_ORD 65
+#define DT_N_S_pin_controller_S_uart0_default_S_group1_ORD_STR_SORTABLE 00065
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_REQUIRES_ORDS \
-	60, /* /pin-controller/uart0_default */
+	64, /* /pin-controller/uart0_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5742,12 +6031,12 @@
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart0_default_S_group2_ORD 62
-#define DT_N_S_pin_controller_S_uart0_default_S_group2_ORD_STR_SORTABLE 00062
+#define DT_N_S_pin_controller_S_uart0_default_S_group2_ORD 66
+#define DT_N_S_pin_controller_S_uart0_default_S_group2_ORD_STR_SORTABLE 00066
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_REQUIRES_ORDS \
-	60, /* /pin-controller/uart0_default */
+	64, /* /pin-controller/uart0_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_SUPPORTS_ORDS /* nothing */
@@ -5827,17 +6116,17 @@
 #define DT_N_S_pin_controller_S_uart0_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart0_sleep_ORD 63
-#define DT_N_S_pin_controller_S_uart0_sleep_ORD_STR_SORTABLE 00063
+#define DT_N_S_pin_controller_S_uart0_sleep_ORD 67
+#define DT_N_S_pin_controller_S_uart0_sleep_ORD_STR_SORTABLE 00067
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart0_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart0_sleep_SUPPORTS_ORDS \
-	64, /* /pin-controller/uart0_sleep/group1 */ \
-	114, /* /soc/uart@40002000 */
+	68, /* /pin-controller/uart0_sleep/group1 */ \
+	117, /* /soc/uart@40002000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_uart0_sleep_EXISTS 1
@@ -5888,12 +6177,12 @@
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_ORD 64
-#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_ORD_STR_SORTABLE 00064
+#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_ORD 68
+#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_ORD_STR_SORTABLE 00068
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_REQUIRES_ORDS \
-	63, /* /pin-controller/uart0_sleep */
+	67, /* /pin-controller/uart0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -5985,18 +6274,18 @@
 #define DT_N_S_pin_controller_S_uart1_default_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_uart1_default_S_group1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pin_controller_S_uart1_default_S_group2, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart1_default_ORD 65
-#define DT_N_S_pin_controller_S_uart1_default_ORD_STR_SORTABLE 00065
+#define DT_N_S_pin_controller_S_uart1_default_ORD 69
+#define DT_N_S_pin_controller_S_uart1_default_ORD_STR_SORTABLE 00069
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart1_default_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart1_default_SUPPORTS_ORDS \
-	66, /* /pin-controller/uart1_default/group1 */ \
-	67, /* /pin-controller/uart1_default/group2 */ \
-	115, /* /soc/uart@40028000 */
+	70, /* /pin-controller/uart1_default/group1 */ \
+	71, /* /pin-controller/uart1_default/group2 */ \
+	118, /* /soc/uart@40028000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_uart1_default_EXISTS 1
@@ -6047,12 +6336,12 @@
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart1_default_S_group1_ORD 66
-#define DT_N_S_pin_controller_S_uart1_default_S_group1_ORD_STR_SORTABLE 00066
+#define DT_N_S_pin_controller_S_uart1_default_S_group1_ORD 70
+#define DT_N_S_pin_controller_S_uart1_default_S_group1_ORD_STR_SORTABLE 00070
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_REQUIRES_ORDS \
-	65, /* /pin-controller/uart1_default */
+	69, /* /pin-controller/uart1_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_SUPPORTS_ORDS /* nothing */
@@ -6126,12 +6415,12 @@
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart1_default_S_group2_ORD 67
-#define DT_N_S_pin_controller_S_uart1_default_S_group2_ORD_STR_SORTABLE 00067
+#define DT_N_S_pin_controller_S_uart1_default_S_group2_ORD 71
+#define DT_N_S_pin_controller_S_uart1_default_S_group2_ORD_STR_SORTABLE 00071
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_REQUIRES_ORDS \
-	65, /* /pin-controller/uart1_default */
+	69, /* /pin-controller/uart1_default */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_SUPPORTS_ORDS /* nothing */
@@ -6205,17 +6494,17 @@
 #define DT_N_S_pin_controller_S_uart1_sleep_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart1_sleep_ORD 68
-#define DT_N_S_pin_controller_S_uart1_sleep_ORD_STR_SORTABLE 00068
+#define DT_N_S_pin_controller_S_uart1_sleep_ORD 72
+#define DT_N_S_pin_controller_S_uart1_sleep_ORD_STR_SORTABLE 00072
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart1_sleep_REQUIRES_ORDS \
-	26, /* /pin-controller */
+	30, /* /pin-controller */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart1_sleep_SUPPORTS_ORDS \
-	69, /* /pin-controller/uart1_sleep/group1 */ \
-	115, /* /soc/uart@40028000 */
+	73, /* /pin-controller/uart1_sleep/group1 */ \
+	118, /* /soc/uart@40028000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pin_controller_S_uart1_sleep_EXISTS 1
@@ -6266,12 +6555,12 @@
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_ORD 69
-#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_ORD_STR_SORTABLE 00069
+#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_ORD 73
+#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_ORD_STR_SORTABLE 00073
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_REQUIRES_ORDS \
-	68, /* /pin-controller/uart1_sleep */
+	72, /* /pin-controller/uart1_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_SUPPORTS_ORDS /* nothing */
@@ -6354,20 +6643,20 @@
 #define DT_N_S_soc_S_pwm_4001c000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_pwm_4001c000_ORD 70
-#define DT_N_S_soc_S_pwm_4001c000_ORD_STR_SORTABLE 00070
+#define DT_N_S_soc_S_pwm_4001c000_ORD 74
+#define DT_N_S_soc_S_pwm_4001c000_ORD_STR_SORTABLE 00074
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_pwm_4001c000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	35, /* /pin-controller/pwm0_default */ \
-	37, /* /pin-controller/pwm0_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	39, /* /pin-controller/pwm0_default */ \
+	41, /* /pin-controller/pwm0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pwm_4001c000_SUPPORTS_ORDS \
-	71, /* /pwmleds */ \
-	72, /* /pwmleds/pwm_led_0 */
+	75, /* /pwmleds */ \
+	76, /* /pwmleds/pwm_led_0 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_pwm_4001c000_EXISTS 1
@@ -6536,17 +6825,17 @@
 #define DT_N_S_pwmleds_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_pwmleds_S_pwm_led_0, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pwmleds_ORD 71
-#define DT_N_S_pwmleds_ORD_STR_SORTABLE 00071
+#define DT_N_S_pwmleds_ORD 75
+#define DT_N_S_pwmleds_ORD_STR_SORTABLE 00075
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pwmleds_REQUIRES_ORDS \
 	0, /* / */ \
-	70, /* /soc/pwm@4001c000 */
+	74, /* /soc/pwm@4001c000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pwmleds_SUPPORTS_ORDS \
-	72, /* /pwmleds/pwm_led_0 */
+	76, /* /pwmleds/pwm_led_0 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_pwmleds_EXISTS 1
@@ -6610,13 +6899,13 @@
 #define DT_N_S_pwmleds_S_pwm_led_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_pwmleds_S_pwm_led_0_ORD 72
-#define DT_N_S_pwmleds_S_pwm_led_0_ORD_STR_SORTABLE 00072
+#define DT_N_S_pwmleds_S_pwm_led_0_ORD 76
+#define DT_N_S_pwmleds_S_pwm_led_0_ORD_STR_SORTABLE 00076
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_pwmleds_S_pwm_led_0_REQUIRES_ORDS \
-	70, /* /soc/pwm@4001c000 */ \
-	71, /* /pwmleds */
+	74, /* /soc/pwm@4001c000 */ \
+	75, /* /pwmleds */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_pwmleds_S_pwm_led_0_SUPPORTS_ORDS /* nothing */
@@ -6688,12 +6977,12 @@
 #define DT_N_S_soc_S_acl_4001e000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_acl_4001e000_ORD 73
-#define DT_N_S_soc_S_acl_4001e000_ORD_STR_SORTABLE 00073
+#define DT_N_S_soc_S_acl_4001e000_ORD 77
+#define DT_N_S_soc_S_acl_4001e000_ORD_STR_SORTABLE 00077
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_acl_4001e000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_acl_4001e000_SUPPORTS_ORDS /* nothing */
@@ -6799,13 +7088,13 @@
 #define DT_N_S_soc_S_adc_40007000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_adc_40007000_ORD 74
-#define DT_N_S_soc_S_adc_40007000_ORD_STR_SORTABLE 00074
+#define DT_N_S_soc_S_adc_40007000_ORD 78
+#define DT_N_S_soc_S_adc_40007000_ORD_STR_SORTABLE 00078
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_adc_40007000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_adc_40007000_SUPPORTS_ORDS /* nothing */
@@ -6924,13 +7213,13 @@
 #define DT_N_S_soc_S_ccm_4000f000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_ccm_4000f000_ORD 75
-#define DT_N_S_soc_S_ccm_4000f000_ORD_STR_SORTABLE 00075
+#define DT_N_S_soc_S_ccm_4000f000_ORD 79
+#define DT_N_S_soc_S_ccm_4000f000_ORD_STR_SORTABLE 00079
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_ccm_4000f000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_ccm_4000f000_SUPPORTS_ORDS /* nothing */
@@ -7053,13 +7342,13 @@
 #define DT_N_S_soc_S_clock_40000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_clock_40000000_ORD 76
-#define DT_N_S_soc_S_clock_40000000_ORD_STR_SORTABLE 00076
+#define DT_N_S_soc_S_clock_40000000_ORD 80
+#define DT_N_S_soc_S_clock_40000000_ORD_STR_SORTABLE 00080
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_clock_40000000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_clock_40000000_SUPPORTS_ORDS /* nothing */
@@ -7178,13 +7467,13 @@
 #define DT_N_S_soc_S_comparator_40013000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_comparator_40013000_ORD 77
-#define DT_N_S_soc_S_comparator_40013000_ORD_STR_SORTABLE 00077
+#define DT_N_S_soc_S_comparator_40013000_ORD 81
+#define DT_N_S_soc_S_comparator_40013000_ORD_STR_SORTABLE 00081
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_comparator_40013000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_comparator_40013000_SUPPORTS_ORDS /* nothing */
@@ -7303,13 +7592,13 @@
 #define DT_N_S_soc_S_crypto_5002a000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_crypto_5002a000_ORD 78
-#define DT_N_S_soc_S_crypto_5002a000_ORD_STR_SORTABLE 00078
+#define DT_N_S_soc_S_crypto_5002a000_ORD 82
+#define DT_N_S_soc_S_crypto_5002a000_ORD_STR_SORTABLE 00082
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_crypto_5002a000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_crypto_5002a000_SUPPORTS_ORDS /* nothing */
@@ -7475,13 +7764,13 @@
 #define DT_N_S_soc_S_ecb_4000e000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_ecb_4000e000_ORD 79
-#define DT_N_S_soc_S_ecb_4000e000_ORD_STR_SORTABLE 00079
+#define DT_N_S_soc_S_ecb_4000e000_ORD 83
+#define DT_N_S_soc_S_ecb_4000e000_ORD_STR_SORTABLE 00083
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_ecb_4000e000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_ecb_4000e000_SUPPORTS_ORDS /* nothing */
@@ -7600,13 +7889,13 @@
 #define DT_N_S_soc_S_egu_40014000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40014000_ORD 80
-#define DT_N_S_soc_S_egu_40014000_ORD_STR_SORTABLE 00080
+#define DT_N_S_soc_S_egu_40014000_ORD 84
+#define DT_N_S_soc_S_egu_40014000_ORD_STR_SORTABLE 00084
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40014000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40014000_SUPPORTS_ORDS /* nothing */
@@ -7741,13 +8030,13 @@
 #define DT_N_S_soc_S_egu_40015000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40015000_ORD 81
-#define DT_N_S_soc_S_egu_40015000_ORD_STR_SORTABLE 00081
+#define DT_N_S_soc_S_egu_40015000_ORD 85
+#define DT_N_S_soc_S_egu_40015000_ORD_STR_SORTABLE 00085
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40015000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40015000_SUPPORTS_ORDS /* nothing */
@@ -7882,13 +8171,13 @@
 #define DT_N_S_soc_S_egu_40016000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40016000_ORD 82
-#define DT_N_S_soc_S_egu_40016000_ORD_STR_SORTABLE 00082
+#define DT_N_S_soc_S_egu_40016000_ORD 86
+#define DT_N_S_soc_S_egu_40016000_ORD_STR_SORTABLE 00086
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40016000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40016000_SUPPORTS_ORDS /* nothing */
@@ -8023,13 +8312,13 @@
 #define DT_N_S_soc_S_egu_40017000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40017000_ORD 83
-#define DT_N_S_soc_S_egu_40017000_ORD_STR_SORTABLE 00083
+#define DT_N_S_soc_S_egu_40017000_ORD 87
+#define DT_N_S_soc_S_egu_40017000_ORD_STR_SORTABLE 00087
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40017000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40017000_SUPPORTS_ORDS /* nothing */
@@ -8164,13 +8453,13 @@
 #define DT_N_S_soc_S_egu_40018000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40018000_ORD 84
-#define DT_N_S_soc_S_egu_40018000_ORD_STR_SORTABLE 00084
+#define DT_N_S_soc_S_egu_40018000_ORD 88
+#define DT_N_S_soc_S_egu_40018000_ORD_STR_SORTABLE 00088
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40018000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40018000_SUPPORTS_ORDS /* nothing */
@@ -8305,13 +8594,13 @@
 #define DT_N_S_soc_S_egu_40019000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_egu_40019000_ORD 85
-#define DT_N_S_soc_S_egu_40019000_ORD_STR_SORTABLE 00085
+#define DT_N_S_soc_S_egu_40019000_ORD 89
+#define DT_N_S_soc_S_egu_40019000_ORD_STR_SORTABLE 00089
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_egu_40019000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_egu_40019000_SUPPORTS_ORDS /* nothing */
@@ -8446,12 +8735,12 @@
 #define DT_N_S_soc_S_ficr_10000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_ficr_10000000_ORD 86
-#define DT_N_S_soc_S_ficr_10000000_ORD_STR_SORTABLE 00086
+#define DT_N_S_soc_S_ficr_10000000_ORD 90
+#define DT_N_S_soc_S_ficr_10000000_ORD_STR_SORTABLE 00090
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_ficr_10000000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_ficr_10000000_SUPPORTS_ORDS /* nothing */
@@ -8557,15 +8846,15 @@
 #define DT_N_S_soc_S_i2c_40003000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_i2c_40003000_ORD 87
-#define DT_N_S_soc_S_i2c_40003000_ORD_STR_SORTABLE 00087
+#define DT_N_S_soc_S_i2c_40003000_ORD 91
+#define DT_N_S_soc_S_i2c_40003000_ORD_STR_SORTABLE 00091
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_i2c_40003000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	27, /* /pin-controller/i2c0_default */ \
-	29, /* /pin-controller/i2c0_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	31, /* /pin-controller/i2c0_default */ \
+	33, /* /pin-controller/i2c0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_i2c_40003000_SUPPORTS_ORDS /* nothing */
@@ -8744,15 +9033,15 @@
 #define DT_N_S_soc_S_i2c_40004000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_i2c_40004000_ORD 88
-#define DT_N_S_soc_S_i2c_40004000_ORD_STR_SORTABLE 00088
+#define DT_N_S_soc_S_i2c_40004000_ORD 92
+#define DT_N_S_soc_S_i2c_40004000_ORD_STR_SORTABLE 00092
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_i2c_40004000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	31, /* /pin-controller/i2c1_default */ \
-	33, /* /pin-controller/i2c1_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	35, /* /pin-controller/i2c1_default */ \
+	37, /* /pin-controller/i2c1_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_i2c_40004000_SUPPORTS_ORDS /* nothing */
@@ -8930,13 +9219,13 @@
 #define DT_N_S_soc_S_i2s_40025000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_i2s_40025000_ORD 89
-#define DT_N_S_soc_S_i2s_40025000_ORD_STR_SORTABLE 00089
+#define DT_N_S_soc_S_i2s_40025000_ORD 93
+#define DT_N_S_soc_S_i2s_40025000_ORD_STR_SORTABLE 00093
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_i2s_40025000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_i2s_40025000_SUPPORTS_ORDS /* nothing */
@@ -9071,12 +9360,12 @@
 #define DT_N_S_soc_S_memory_20000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_memory_20000000_ORD 90
-#define DT_N_S_soc_S_memory_20000000_ORD_STR_SORTABLE 00090
+#define DT_N_S_soc_S_memory_20000000_ORD 94
+#define DT_N_S_soc_S_memory_20000000_ORD_STR_SORTABLE 00094
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_memory_20000000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_memory_20000000_SUPPORTS_ORDS /* nothing */
@@ -9162,12 +9451,12 @@
 #define DT_N_S_soc_S_mwu_40020000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_mwu_40020000_ORD 91
-#define DT_N_S_soc_S_mwu_40020000_ORD_STR_SORTABLE 00091
+#define DT_N_S_soc_S_mwu_40020000_ORD 95
+#define DT_N_S_soc_S_mwu_40020000_ORD_STR_SORTABLE 00095
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_mwu_40020000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_mwu_40020000_SUPPORTS_ORDS /* nothing */
@@ -9273,13 +9562,13 @@
 #define DT_N_S_soc_S_nfct_40005000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_nfct_40005000_ORD 92
-#define DT_N_S_soc_S_nfct_40005000_ORD_STR_SORTABLE 00092
+#define DT_N_S_soc_S_nfct_40005000_ORD 96
+#define DT_N_S_soc_S_nfct_40005000_ORD_STR_SORTABLE 00096
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_nfct_40005000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_nfct_40005000_SUPPORTS_ORDS /* nothing */
@@ -9398,13 +9687,13 @@
 #define DT_N_S_soc_S_pdm_4001d000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_pdm_4001d000_ORD 93
-#define DT_N_S_soc_S_pdm_4001d000_ORD_STR_SORTABLE 00093
+#define DT_N_S_soc_S_pdm_4001d000_ORD 97
+#define DT_N_S_soc_S_pdm_4001d000_ORD_STR_SORTABLE 00097
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_pdm_4001d000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pdm_4001d000_SUPPORTS_ORDS /* nothing */
@@ -9541,12 +9830,12 @@
 #define DT_N_S_soc_S_ppi_4001f000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_ppi_4001f000_ORD 94
-#define DT_N_S_soc_S_ppi_4001f000_ORD_STR_SORTABLE 00094
+#define DT_N_S_soc_S_ppi_4001f000_ORD 98
+#define DT_N_S_soc_S_ppi_4001f000_ORD_STR_SORTABLE 00098
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_ppi_4001f000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_ppi_4001f000_SUPPORTS_ORDS /* nothing */
@@ -9652,13 +9941,13 @@
 #define DT_N_S_soc_S_pwm_40021000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_pwm_40021000_ORD 95
-#define DT_N_S_soc_S_pwm_40021000_ORD_STR_SORTABLE 00095
+#define DT_N_S_soc_S_pwm_40021000_ORD 99
+#define DT_N_S_soc_S_pwm_40021000_ORD_STR_SORTABLE 00099
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_pwm_40021000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pwm_40021000_SUPPORTS_ORDS /* nothing */
@@ -9779,13 +10068,13 @@
 #define DT_N_S_soc_S_pwm_40022000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_pwm_40022000_ORD 96
-#define DT_N_S_soc_S_pwm_40022000_ORD_STR_SORTABLE 00096
+#define DT_N_S_soc_S_pwm_40022000_ORD 100
+#define DT_N_S_soc_S_pwm_40022000_ORD_STR_SORTABLE 00100
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_pwm_40022000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pwm_40022000_SUPPORTS_ORDS /* nothing */
@@ -9906,13 +10195,13 @@
 #define DT_N_S_soc_S_pwm_4002d000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_pwm_4002d000_ORD 97
-#define DT_N_S_soc_S_pwm_4002d000_ORD_STR_SORTABLE 00097
+#define DT_N_S_soc_S_pwm_4002d000_ORD 101
+#define DT_N_S_soc_S_pwm_4002d000_ORD_STR_SORTABLE 00101
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_pwm_4002d000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pwm_4002d000_SUPPORTS_ORDS /* nothing */
@@ -10033,13 +10322,13 @@
 #define DT_N_S_soc_S_qdec_40012000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_qdec_40012000_ORD 98
-#define DT_N_S_soc_S_qdec_40012000_ORD_STR_SORTABLE 00098
+#define DT_N_S_soc_S_qdec_40012000_ORD 102
+#define DT_N_S_soc_S_qdec_40012000_ORD_STR_SORTABLE 00102
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_qdec_40012000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_qdec_40012000_SUPPORTS_ORDS /* nothing */
@@ -10159,13 +10448,13 @@
 #define DT_N_S_soc_S_random_4000d000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_random_4000d000_ORD 99
-#define DT_N_S_soc_S_random_4000d000_ORD_STR_SORTABLE 00099
+#define DT_N_S_soc_S_random_4000d000_ORD 103
+#define DT_N_S_soc_S_random_4000d000_ORD_STR_SORTABLE 00103
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_random_4000d000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_random_4000d000_SUPPORTS_ORDS /* nothing */
@@ -10284,13 +10573,13 @@
 #define DT_N_S_soc_S_rtc_4000b000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rtc_4000b000_ORD 100
-#define DT_N_S_soc_S_rtc_4000b000_ORD_STR_SORTABLE 00100
+#define DT_N_S_soc_S_rtc_4000b000_ORD 104
+#define DT_N_S_soc_S_rtc_4000b000_ORD_STR_SORTABLE 00104
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_rtc_4000b000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_rtc_4000b000_SUPPORTS_ORDS /* nothing */
@@ -10421,13 +10710,13 @@
 #define DT_N_S_soc_S_rtc_40011000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rtc_40011000_ORD 101
-#define DT_N_S_soc_S_rtc_40011000_ORD_STR_SORTABLE 00101
+#define DT_N_S_soc_S_rtc_40011000_ORD 105
+#define DT_N_S_soc_S_rtc_40011000_ORD_STR_SORTABLE 00105
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_rtc_40011000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_rtc_40011000_SUPPORTS_ORDS /* nothing */
@@ -10558,13 +10847,13 @@
 #define DT_N_S_soc_S_rtc_40024000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rtc_40024000_ORD 102
-#define DT_N_S_soc_S_rtc_40024000_ORD_STR_SORTABLE 00102
+#define DT_N_S_soc_S_rtc_40024000_ORD 106
+#define DT_N_S_soc_S_rtc_40024000_ORD_STR_SORTABLE 00106
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_rtc_40024000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_rtc_40024000_SUPPORTS_ORDS /* nothing */
@@ -10695,15 +10984,15 @@
 #define DT_N_S_soc_S_spi_40003000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_spi_40003000_ORD 103
-#define DT_N_S_soc_S_spi_40003000_ORD_STR_SORTABLE 00103
+#define DT_N_S_soc_S_spi_40003000_ORD 107
+#define DT_N_S_soc_S_spi_40003000_ORD_STR_SORTABLE 00107
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_spi_40003000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	44, /* /pin-controller/spi0_default */ \
-	46, /* /pin-controller/spi0_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	48, /* /pin-controller/spi0_default */ \
+	50, /* /pin-controller/spi0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_spi_40003000_SUPPORTS_ORDS /* nothing */
@@ -10845,190 +11134,6 @@
 #define DT_N_S_soc_S_spi_40003000_P_easydma_maxcnt_bits_EXISTS 1
 
 /*
- * Devicetree node: /soc/spi@40004000
- *
- * Node identifier: DT_N_S_soc_S_spi_40004000
- *
- * Binding (compatible = nordic,nrf-spi):
- *   $ZEPHYR_BASE/dts/bindings/spi/nordic,nrf-spi.yaml
- *
- * (Descriptions have moved to the Devicetree Bindings Index
- * in the documentation.)
- */
-
-/* Node's full path: */
-#define DT_N_S_soc_S_spi_40004000_PATH "/soc/spi@40004000"
-
-/* Node's name with unit-address: */
-#define DT_N_S_soc_S_spi_40004000_FULL_NAME "spi@40004000"
-
-/* Node parent (/soc) identifier: */
-#define DT_N_S_soc_S_spi_40004000_PARENT DT_N_S_soc
-
-/* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_spi_40004000_CHILD_IDX 12
-
-/* Helper macros for child nodes of this node. */
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD(fn) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_SEP(fn, sep) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_VARGS(fn, ...) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY(fn) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
-#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
-
-/* Node's dependency ordinal: */
-#define DT_N_S_soc_S_spi_40004000_ORD 104
-#define DT_N_S_soc_S_spi_40004000_ORD_STR_SORTABLE 00104
-
-/* Ordinals for what this node depends on directly: */
-#define DT_N_S_soc_S_spi_40004000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	48, /* /pin-controller/spi1_default */ \
-	50, /* /pin-controller/spi1_sleep */
-
-/* Ordinals for what depends directly on this node: */
-#define DT_N_S_soc_S_spi_40004000_SUPPORTS_ORDS /* nothing */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_soc_S_spi_40004000_EXISTS 1
-#define DT_N_INST_0_nordic_nrf_spi DT_N_S_soc_S_spi_40004000
-#define DT_N_NODELABEL_spi1        DT_N_S_soc_S_spi_40004000
-
-/* Macros for properties that are special in the specification: */
-#define DT_N_S_soc_S_spi_40004000_REG_NUM 1
-#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_VAL_ADDRESS 1073758208 /* 0x40004000 */
-#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_VAL_SIZE 4096 /* 0x1000 */
-#define DT_N_S_soc_S_spi_40004000_RANGES_NUM 0
-#define DT_N_S_soc_S_spi_40004000_FOREACH_RANGE(fn) 
-#define DT_N_S_soc_S_spi_40004000_IRQ_NUM 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_irq 4
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_irq_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_priority 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_priority_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_CONTROLLER DT_N_S_soc_S_interrupt_controller_e000e100
-#define DT_N_S_soc_S_spi_40004000_IRQ_LEVEL 1
-#define DT_N_S_soc_S_spi_40004000_COMPAT_MATCHES_nordic_nrf_spi 1
-#define DT_N_S_soc_S_spi_40004000_COMPAT_VENDOR_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_COMPAT_VENDOR_IDX_0 "Nordic Semiconductor"
-#define DT_N_S_soc_S_spi_40004000_COMPAT_MODEL_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_COMPAT_MODEL_IDX_0 "nrf-spi"
-#define DT_N_S_soc_S_spi_40004000_STATUS_okay 1
-
-/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NUM 2
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_TOKEN default
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_UPPER_TOKEN DEFAULT
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_IDX 0
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_IDX_0_PH DT_N_S_pin_controller_S_spi1_default
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_TOKEN sleep
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_UPPER_TOKEN SLEEP
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_IDX 1
-#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_IDX_0_PH DT_N_S_pin_controller_S_spi1_sleep
-
-/* Generic property macros: */
-#define DT_N_S_soc_S_spi_40004000_P_wakeup_source 0
-#define DT_N_S_soc_S_spi_40004000_P_wakeup_source_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_zephyr_pm_device_runtime_auto 0
-#define DT_N_S_soc_S_spi_40004000_P_zephyr_pm_device_runtime_auto_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_status "okay"
-#define DT_N_S_soc_S_spi_40004000_P_status_STRING_UNQUOTED okay
-#define DT_N_S_soc_S_spi_40004000_P_status_STRING_TOKEN okay
-#define DT_N_S_soc_S_spi_40004000_P_status_STRING_UPPER_TOKEN OKAY
-#define DT_N_S_soc_S_spi_40004000_P_status_IDX_0 "okay"
-#define DT_N_S_soc_S_spi_40004000_P_status_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_IDX 1
-#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_VAL_okay_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_TOKEN okay
-#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_UPPER_TOKEN OKAY
-#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, status, 0)
-#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, status, 0)
-#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, status, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, status, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_status_LEN 1
-#define DT_N_S_soc_S_spi_40004000_P_status_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_compatible {"nordic,nrf-spi"}
-#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0 "nordic,nrf-spi"
-#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_UNQUOTED nordic,nrf-spi
-#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_TOKEN nordic_nrf_spi
-#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_UPPER_TOKEN NORDIC_NRF_SPI
-#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, compatible, 0)
-#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, compatible, 0)
-#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_compatible_LEN 1
-#define DT_N_S_soc_S_spi_40004000_P_compatible_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_reg {1073758208 /* 0x40004000 */, 4096 /* 0x1000 */}
-#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_0 1073758208
-#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_1 4096
-#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_reg_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_interrupts {4 /* 0x4 */, 1 /* 0x1 */}
-#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_0 4
-#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_1 1
-#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_interrupts_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_zephyr_deferred_init 0
-#define DT_N_S_soc_S_spi_40004000_P_zephyr_deferred_init_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0 DT_N_S_pin_controller_S_spi1_default
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0_PH DT_N_S_pin_controller_S_spi1_default
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_LEN 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0 DT_N_S_pin_controller_S_spi1_sleep
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0_PH DT_N_S_pin_controller_S_spi1_sleep
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_LEN 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names {"default", "sleep"}
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0 "default"
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_UNQUOTED default
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_TOKEN default
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_UPPER_TOKEN DEFAULT
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1 "sleep"
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_UNQUOTED sleep
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_TOKEN sleep
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_UPPER_TOKEN SLEEP
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0) \
-	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0, __VA_ARGS__) \
-	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1, __VA_ARGS__)
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_LEN 2
-#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_max_frequency 8000000
-#define DT_N_S_soc_S_spi_40004000_P_max_frequency_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_overrun_character 255
-#define DT_N_S_soc_S_spi_40004000_P_overrun_character_EXISTS 1
-#define DT_N_S_soc_S_spi_40004000_P_easydma_maxcnt_bits 16
-#define DT_N_S_soc_S_spi_40004000_P_easydma_maxcnt_bits_EXISTS 1
-
-/*
  * Devicetree node: /soc/spi@40023000
  *
  * Node identifier: DT_N_S_soc_S_spi_40023000
@@ -11063,15 +11168,15 @@
 #define DT_N_S_soc_S_spi_40023000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_spi_40023000_ORD 105
-#define DT_N_S_soc_S_spi_40023000_ORD_STR_SORTABLE 00105
+#define DT_N_S_soc_S_spi_40023000_ORD 108
+#define DT_N_S_soc_S_spi_40023000_ORD_STR_SORTABLE 00108
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_spi_40023000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	52, /* /pin-controller/spi2_default */ \
-	54, /* /pin-controller/spi2_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	56, /* /pin-controller/spi2_default */ \
+	58, /* /pin-controller/spi2_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_spi_40023000_SUPPORTS_ORDS /* nothing */
@@ -11247,17 +11352,17 @@
 #define DT_N_S_soc_S_gpio_50000300_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_gpio_50000300_ORD 106
-#define DT_N_S_soc_S_gpio_50000300_ORD_STR_SORTABLE 00106
+#define DT_N_S_soc_S_gpio_50000300_ORD 109
+#define DT_N_S_soc_S_gpio_50000300_ORD_STR_SORTABLE 00109
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_gpio_50000300_REQUIRES_ORDS \
-	7, /* /soc */ \
-	11, /* /soc/gpiote@40006000 */
+	6, /* /soc */ \
+	10, /* /soc/gpiote@40006000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_gpio_50000300_SUPPORTS_ORDS \
-	107, /* /soc/spi@4002f000 */
+	110, /* /soc/spi@4002f000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_gpio_50000300_EXISTS 1
@@ -11530,16 +11635,16 @@
 #define DT_N_S_soc_S_spi_4002f000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_spi_4002f000_ORD 107
-#define DT_N_S_soc_S_spi_4002f000_ORD_STR_SORTABLE 00107
+#define DT_N_S_soc_S_spi_4002f000_ORD 110
+#define DT_N_S_soc_S_spi_4002f000_ORD_STR_SORTABLE 00110
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_spi_4002f000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	56, /* /pin-controller/spi3_default */ \
-	58, /* /pin-controller/spi3_sleep */ \
-	106, /* /soc/gpio@50000300 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	60, /* /pin-controller/spi3_default */ \
+	62, /* /pin-controller/spi3_sleep */ \
+	109, /* /soc/gpio@50000300 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_spi_4002f000_SUPPORTS_ORDS /* nothing */
@@ -11736,13 +11841,13 @@
 #define DT_N_S_soc_S_temp_4000c000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_temp_4000c000_ORD 108
-#define DT_N_S_soc_S_temp_4000c000_ORD_STR_SORTABLE 00108
+#define DT_N_S_soc_S_temp_4000c000_ORD 111
+#define DT_N_S_soc_S_temp_4000c000_ORD_STR_SORTABLE 00111
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_temp_4000c000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_temp_4000c000_SUPPORTS_ORDS /* nothing */
@@ -11861,13 +11966,13 @@
 #define DT_N_S_soc_S_timer_40008000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_40008000_ORD 109
-#define DT_N_S_soc_S_timer_40008000_ORD_STR_SORTABLE 00109
+#define DT_N_S_soc_S_timer_40008000_ORD 112
+#define DT_N_S_soc_S_timer_40008000_ORD_STR_SORTABLE 00112
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_40008000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_40008000_SUPPORTS_ORDS /* nothing */
@@ -11994,13 +12099,13 @@
 #define DT_N_S_soc_S_timer_4000a000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_4000a000_ORD 110
-#define DT_N_S_soc_S_timer_4000a000_ORD_STR_SORTABLE 00110
+#define DT_N_S_soc_S_timer_4000a000_ORD 113
+#define DT_N_S_soc_S_timer_4000a000_ORD_STR_SORTABLE 00113
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_4000a000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_4000a000_SUPPORTS_ORDS /* nothing */
@@ -12127,13 +12232,13 @@
 #define DT_N_S_soc_S_timer_4001a000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_4001a000_ORD 111
-#define DT_N_S_soc_S_timer_4001a000_ORD_STR_SORTABLE 00111
+#define DT_N_S_soc_S_timer_4001a000_ORD 114
+#define DT_N_S_soc_S_timer_4001a000_ORD_STR_SORTABLE 00114
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_4001a000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_4001a000_SUPPORTS_ORDS /* nothing */
@@ -12260,13 +12365,13 @@
 #define DT_N_S_soc_S_timer_4001b000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_4001b000_ORD 112
-#define DT_N_S_soc_S_timer_4001b000_ORD_STR_SORTABLE 00112
+#define DT_N_S_soc_S_timer_4001b000_ORD 115
+#define DT_N_S_soc_S_timer_4001b000_ORD_STR_SORTABLE 00115
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_4001b000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_4001b000_SUPPORTS_ORDS /* nothing */
@@ -12393,12 +12498,12 @@
 #define DT_N_S_soc_S_timer_e000e010_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_timer_e000e010_ORD 113
-#define DT_N_S_soc_S_timer_e000e010_ORD_STR_SORTABLE 00113
+#define DT_N_S_soc_S_timer_e000e010_ORD 116
+#define DT_N_S_soc_S_timer_e000e010_ORD_STR_SORTABLE 00116
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_timer_e000e010_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_timer_e000e010_SUPPORTS_ORDS /* nothing */
@@ -12504,15 +12609,15 @@
 #define DT_N_S_soc_S_uart_40002000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_uart_40002000_ORD 114
-#define DT_N_S_soc_S_uart_40002000_ORD_STR_SORTABLE 00114
+#define DT_N_S_soc_S_uart_40002000_ORD 117
+#define DT_N_S_soc_S_uart_40002000_ORD_STR_SORTABLE 00117
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_uart_40002000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	60, /* /pin-controller/uart0_default */ \
-	63, /* /pin-controller/uart0_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	64, /* /pin-controller/uart0_default */ \
+	67, /* /pin-controller/uart0_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_uart_40002000_SUPPORTS_ORDS /* nothing */
@@ -12690,15 +12795,15 @@
 #define DT_N_S_soc_S_uart_40028000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_uart_40028000_ORD 115
-#define DT_N_S_soc_S_uart_40028000_ORD_STR_SORTABLE 00115
+#define DT_N_S_soc_S_uart_40028000_ORD 118
+#define DT_N_S_soc_S_uart_40028000_ORD_STR_SORTABLE 00118
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_uart_40028000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	65, /* /pin-controller/uart1_default */ \
-	68, /* /pin-controller/uart1_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	69, /* /pin-controller/uart1_default */ \
+	72, /* /pin-controller/uart1_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_uart_40028000_SUPPORTS_ORDS /* nothing */
@@ -12877,12 +12982,12 @@
 #define DT_N_S_soc_S_uicr_10001000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_uicr_10001000_ORD 116
-#define DT_N_S_soc_S_uicr_10001000_ORD_STR_SORTABLE 00116
+#define DT_N_S_soc_S_uicr_10001000_ORD 119
+#define DT_N_S_soc_S_uicr_10001000_ORD_STR_SORTABLE 00119
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_uicr_10001000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_uicr_10001000_SUPPORTS_ORDS /* nothing */
@@ -12992,13 +13097,13 @@
 #define DT_N_S_soc_S_usbd_40027000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_usbd_40027000_ORD 117
-#define DT_N_S_soc_S_usbd_40027000_ORD_STR_SORTABLE 00117
+#define DT_N_S_soc_S_usbd_40027000_ORD 120
+#define DT_N_S_soc_S_usbd_40027000_ORD_STR_SORTABLE 00120
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_usbd_40027000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_usbd_40027000_SUPPORTS_ORDS /* nothing */
@@ -13128,13 +13233,13 @@
 #define DT_N_S_soc_S_watchdog_40010000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_watchdog_40010000_ORD 118
-#define DT_N_S_soc_S_watchdog_40010000_ORD_STR_SORTABLE 00118
+#define DT_N_S_soc_S_watchdog_40010000_ORD 121
+#define DT_N_S_soc_S_watchdog_40010000_ORD_STR_SORTABLE 00121
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_watchdog_40010000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_watchdog_40010000_SUPPORTS_ORDS /* nothing */
@@ -13255,16 +13360,16 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_ORD 119
-#define DT_N_S_soc_S_flash_controller_4001e000_ORD_STR_SORTABLE 00119
+#define DT_N_S_soc_S_flash_controller_4001e000_ORD 122
+#define DT_N_S_soc_S_flash_controller_4001e000_ORD_STR_SORTABLE 00122
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_REQUIRES_ORDS \
-	7, /* /soc */
+	6, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_SUPPORTS_ORDS \
-	120, /* /soc/flash-controller@4001e000/flash@0 */
+	123, /* /soc/flash-controller@4001e000/flash@0 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_flash_controller_4001e000_EXISTS 1
@@ -13353,16 +13458,16 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_ORD 120
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_ORD_STR_SORTABLE 00120
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_ORD 123
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_ORD_STR_SORTABLE 00123
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_REQUIRES_ORDS \
-	119, /* /soc/flash-controller@4001e000 */
+	122, /* /soc/flash-controller@4001e000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_SUPPORTS_ORDS \
-	121, /* /soc/flash-controller@4001e000/flash@0/partitions */
+	124, /* /soc/flash-controller@4001e000/flash@0/partitions */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_EXISTS 1
@@ -13449,19 +13554,19 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_ORD 121
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_ORD_STR_SORTABLE 00121
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_ORD 124
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_ORD_STR_SORTABLE 00124
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_REQUIRES_ORDS \
-	120, /* /soc/flash-controller@4001e000/flash@0 */
+	123, /* /soc/flash-controller@4001e000/flash@0 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_SUPPORTS_ORDS \
-	122, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@0 */ \
-	123, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@c000 */ \
-	124, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@82000 */ \
-	125, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@f8000 */
+	125, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@0 */ \
+	126, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@c000 */ \
+	127, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@82000 */ \
+	128, /* /soc/flash-controller@4001e000/flash@0/partitions/partition@f8000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_EXISTS 1
@@ -13513,12 +13618,12 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_ORD 122
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_ORD_STR_SORTABLE 00122
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_ORD 125
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_ORD_STR_SORTABLE 00125
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_REQUIRES_ORDS \
-	121, /* /soc/flash-controller@4001e000/flash@0/partitions */
+	124, /* /soc/flash-controller@4001e000/flash@0/partitions */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0_SUPPORTS_ORDS /* nothing */
@@ -13598,12 +13703,12 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_ORD 123
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_ORD_STR_SORTABLE 00123
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_ORD 126
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_ORD_STR_SORTABLE 00126
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_REQUIRES_ORDS \
-	121, /* /soc/flash-controller@4001e000/flash@0/partitions */
+	124, /* /soc/flash-controller@4001e000/flash@0/partitions */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000_SUPPORTS_ORDS /* nothing */
@@ -13683,12 +13788,12 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_ORD 124
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_ORD_STR_SORTABLE 00124
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_ORD 127
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_ORD_STR_SORTABLE 00127
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_REQUIRES_ORDS \
-	121, /* /soc/flash-controller@4001e000/flash@0/partitions */
+	124, /* /soc/flash-controller@4001e000/flash@0/partitions */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000_SUPPORTS_ORDS /* nothing */
@@ -13768,12 +13873,12 @@
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_ORD 125
-#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_ORD_STR_SORTABLE 00125
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_ORD 128
+#define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_ORD_STR_SORTABLE 00128
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_REQUIRES_ORDS \
-	121, /* /soc/flash-controller@4001e000/flash@0/partitions */
+	124, /* /soc/flash-controller@4001e000/flash@0/partitions */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000_SUPPORTS_ORDS /* nothing */
@@ -13856,18 +13961,18 @@
 #define DT_N_S_soc_S_power_40000000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_power_40000000_ORD 126
-#define DT_N_S_soc_S_power_40000000_ORD_STR_SORTABLE 00126
+#define DT_N_S_soc_S_power_40000000_ORD 129
+#define DT_N_S_soc_S_power_40000000_ORD_STR_SORTABLE 00129
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_power_40000000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_power_40000000_SUPPORTS_ORDS \
-	127, /* /soc/power@40000000/gpregret1@4000051c */ \
-	128, /* /soc/power@40000000/gpregret2@40000520 */
+	130, /* /soc/power@40000000/gpregret1@4000051c */ \
+	131, /* /soc/power@40000000/gpregret2@40000520 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_power_40000000_EXISTS 1
@@ -13983,12 +14088,12 @@
 #define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_ORD 127
-#define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_ORD_STR_SORTABLE 00127
+#define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_ORD 130
+#define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_ORD_STR_SORTABLE 00130
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_REQUIRES_ORDS \
-	126, /* /soc/power@40000000 */
+	129, /* /soc/power@40000000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c_SUPPORTS_ORDS /* nothing */
@@ -14094,12 +14199,12 @@
 #define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_ORD 128
-#define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_ORD_STR_SORTABLE 00128
+#define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_ORD 131
+#define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_ORD_STR_SORTABLE 00131
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_REQUIRES_ORDS \
-	126, /* /soc/power@40000000 */
+	129, /* /soc/power@40000000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_power_40000000_S_gpregret2_40000520_SUPPORTS_ORDS /* nothing */
@@ -14205,19 +14310,19 @@
 #define DT_N_S_soc_S_qspi_40029000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_qspi_40029000_ORD 129
-#define DT_N_S_soc_S_qspi_40029000_ORD_STR_SORTABLE 00129
+#define DT_N_S_soc_S_qspi_40029000_ORD 132
+#define DT_N_S_soc_S_qspi_40029000_ORD_STR_SORTABLE 00132
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_qspi_40029000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */ \
-	39, /* /pin-controller/qspi_default */ \
-	41, /* /pin-controller/qspi_sleep */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	43, /* /pin-controller/qspi_default */ \
+	45, /* /pin-controller/qspi_sleep */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_qspi_40029000_SUPPORTS_ORDS \
-	130, /* /soc/qspi@40029000/mx25r6435f@0 */
+	133, /* /soc/qspi@40029000/mx25r6435f@0 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_qspi_40029000_EXISTS 1
@@ -14416,12 +14521,12 @@
 #define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_ORD 130
-#define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_ORD_STR_SORTABLE 00130
+#define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_ORD 133
+#define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_ORD_STR_SORTABLE 00133
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_REQUIRES_ORDS \
-	129, /* /soc/qspi@40029000 */
+	132, /* /soc/qspi@40029000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0_SUPPORTS_ORDS /* nothing */
@@ -14991,17 +15096,17 @@
 #define DT_N_S_soc_S_radio_40001000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154, __VA_ARGS__)
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_radio_40001000_ORD 131
-#define DT_N_S_soc_S_radio_40001000_ORD_STR_SORTABLE 00131
+#define DT_N_S_soc_S_radio_40001000_ORD 134
+#define DT_N_S_soc_S_radio_40001000_ORD_STR_SORTABLE 00134
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_radio_40001000_REQUIRES_ORDS \
-	7, /* /soc */ \
-	8, /* /soc/interrupt-controller@e000e100 */
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_radio_40001000_SUPPORTS_ORDS \
-	132, /* /soc/radio@40001000/ieee802154 */
+	135, /* /soc/radio@40001000/ieee802154 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_radio_40001000_EXISTS 1
@@ -15127,12 +15232,12 @@
 #define DT_N_S_soc_S_radio_40001000_S_ieee802154_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_radio_40001000_S_ieee802154_ORD 132
-#define DT_N_S_soc_S_radio_40001000_S_ieee802154_ORD_STR_SORTABLE 00132
+#define DT_N_S_soc_S_radio_40001000_S_ieee802154_ORD 135
+#define DT_N_S_soc_S_radio_40001000_S_ieee802154_ORD_STR_SORTABLE 00135
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_radio_40001000_S_ieee802154_REQUIRES_ORDS \
-	131, /* /soc/radio@40001000 */
+	134, /* /soc/radio@40001000 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_radio_40001000_S_ieee802154_SUPPORTS_ORDS /* nothing */
@@ -15195,6 +15300,315 @@
 #define DT_N_S_soc_S_radio_40001000_S_ieee802154_P_zephyr_deferred_init_EXISTS 1
 
 /*
+ * Devicetree node: /soc/spi@40004000
+ *
+ * Node identifier: DT_N_S_soc_S_spi_40004000
+ *
+ * Binding (compatible = nordic,nrf-spi):
+ *   $ZEPHYR_BASE/dts/bindings/spi/nordic,nrf-spi.yaml
+ *
+ * (Descriptions have moved to the Devicetree Bindings Index
+ * in the documentation.)
+ */
+
+/* Node's full path: */
+#define DT_N_S_soc_S_spi_40004000_PATH "/soc/spi@40004000"
+
+/* Node's name with unit-address: */
+#define DT_N_S_soc_S_spi_40004000_FULL_NAME "spi@40004000"
+
+/* Node parent (/soc) identifier: */
+#define DT_N_S_soc_S_spi_40004000_PARENT DT_N_S_soc
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_soc_S_spi_40004000_CHILD_IDX 12
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_spi_40004000_S_camera_0)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000_S_camera_0)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_spi_40004000_S_camera_0)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000_S_camera_0)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__)
+
+/* Node's dependency ordinal: */
+#define DT_N_S_soc_S_spi_40004000_ORD 136
+#define DT_N_S_soc_S_spi_40004000_ORD_STR_SORTABLE 00136
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_soc_S_spi_40004000_REQUIRES_ORDS \
+	6, /* /soc */ \
+	7, /* /soc/interrupt-controller@e000e100 */ \
+	56, /* /pin-controller/spi2_default */ \
+	58, /* /pin-controller/spi2_sleep */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_soc_S_spi_40004000_SUPPORTS_ORDS \
+	137, /* /soc/spi@40004000/camera@0 */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_soc_S_spi_40004000_EXISTS 1
+#define DT_N_INST_0_nordic_nrf_spi DT_N_S_soc_S_spi_40004000
+#define DT_N_NODELABEL_spi1        DT_N_S_soc_S_spi_40004000
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_soc_S_spi_40004000_REG_NUM 1
+#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_VAL_ADDRESS 1073758208 /* 0x40004000 */
+#define DT_N_S_soc_S_spi_40004000_REG_IDX_0_VAL_SIZE 4096 /* 0x1000 */
+#define DT_N_S_soc_S_spi_40004000_RANGES_NUM 0
+#define DT_N_S_soc_S_spi_40004000_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_spi_40004000_IRQ_NUM 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_irq 4
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_irq_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_priority 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_VAL_priority_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_IRQ_IDX_0_CONTROLLER DT_N_S_soc_S_interrupt_controller_e000e100
+#define DT_N_S_soc_S_spi_40004000_IRQ_LEVEL 1
+#define DT_N_S_soc_S_spi_40004000_COMPAT_MATCHES_nordic_nrf_spi 1
+#define DT_N_S_soc_S_spi_40004000_COMPAT_VENDOR_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_COMPAT_VENDOR_IDX_0 "Nordic Semiconductor"
+#define DT_N_S_soc_S_spi_40004000_COMPAT_MODEL_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_COMPAT_MODEL_IDX_0 "nrf-spi"
+#define DT_N_S_soc_S_spi_40004000_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NUM 2
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_TOKEN default
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_0_UPPER_TOKEN DEFAULT
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_IDX 0
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_default_IDX_0_PH DT_N_S_pin_controller_S_spi2_default
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_TOKEN sleep
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_IDX_1_UPPER_TOKEN SLEEP
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_IDX 1
+#define DT_N_S_soc_S_spi_40004000_PINCTRL_NAME_sleep_IDX_0_PH DT_N_S_pin_controller_S_spi2_sleep
+
+/* Generic property macros: */
+#define DT_N_S_soc_S_spi_40004000_P_wakeup_source 0
+#define DT_N_S_soc_S_spi_40004000_P_wakeup_source_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_zephyr_pm_device_runtime_auto 0
+#define DT_N_S_soc_S_spi_40004000_P_zephyr_pm_device_runtime_auto_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_status "okay"
+#define DT_N_S_soc_S_spi_40004000_P_status_STRING_UNQUOTED okay
+#define DT_N_S_soc_S_spi_40004000_P_status_STRING_TOKEN okay
+#define DT_N_S_soc_S_spi_40004000_P_status_STRING_UPPER_TOKEN OKAY
+#define DT_N_S_soc_S_spi_40004000_P_status_IDX_0 "okay"
+#define DT_N_S_soc_S_spi_40004000_P_status_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_IDX 1
+#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_VAL_okay_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_TOKEN okay
+#define DT_N_S_soc_S_spi_40004000_P_status_ENUM_UPPER_TOKEN OKAY
+#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, status, 0)
+#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, status, 0)
+#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, status, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_status_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, status, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_status_LEN 1
+#define DT_N_S_soc_S_spi_40004000_P_status_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_compatible {"nordic,nrf-spi"}
+#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0 "nordic,nrf-spi"
+#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_UNQUOTED nordic,nrf-spi
+#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_TOKEN nordic_nrf_spi
+#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_STRING_UPPER_TOKEN NORDIC_NRF_SPI
+#define DT_N_S_soc_S_spi_40004000_P_compatible_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, compatible, 0)
+#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, compatible, 0)
+#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_compatible_LEN 1
+#define DT_N_S_soc_S_spi_40004000_P_compatible_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_reg {1073758208 /* 0x40004000 */, 4096 /* 0x1000 */}
+#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_0 1073758208
+#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_1 4096
+#define DT_N_S_soc_S_spi_40004000_P_reg_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_reg_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_interrupts {4 /* 0x4 */, 1 /* 0x1 */}
+#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_0 4
+#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_1 1
+#define DT_N_S_soc_S_spi_40004000_P_interrupts_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_interrupts_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_zephyr_deferred_init 0
+#define DT_N_S_soc_S_spi_40004000_P_zephyr_deferred_init_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0 DT_N_S_pin_controller_S_spi2_default
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0_PH DT_N_S_pin_controller_S_spi2_default
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_0, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_LEN 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0 DT_N_S_pin_controller_S_spi2_sleep
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0_PH DT_N_S_pin_controller_S_spi2_sleep
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_1, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_LEN 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_1_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names {"default", "sleep"}
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0 "default"
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_UNQUOTED default
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_TOKEN default
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_STRING_UPPER_TOKEN DEFAULT
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1 "sleep"
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_UNQUOTED sleep
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_TOKEN sleep
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_STRING_UPPER_TOKEN SLEEP
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0) \
+	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0) DT_DEBRACKET_INTERNAL sep \
+	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0, __VA_ARGS__) \
+	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep \
+	fn(DT_N_S_soc_S_spi_40004000, pinctrl_names, 1, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_LEN 2
+#define DT_N_S_soc_S_spi_40004000_P_pinctrl_names_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_max_frequency 8000000
+#define DT_N_S_soc_S_spi_40004000_P_max_frequency_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_overrun_character 255
+#define DT_N_S_soc_S_spi_40004000_P_overrun_character_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_P_easydma_maxcnt_bits 16
+#define DT_N_S_soc_S_spi_40004000_P_easydma_maxcnt_bits_EXISTS 1
+
+/*
+ * Devicetree node: /soc/spi@40004000/camera@0
+ *
+ * Node identifier: DT_N_S_soc_S_spi_40004000_S_camera_0
+ *
+ * Binding (compatible = vnd,spi-device):
+ *   $ZEPHYR_BASE/dts/bindings/test/vnd,spi-device.yaml
+ *
+ * (Descriptions have moved to the Devicetree Bindings Index
+ * in the documentation.)
+ */
+
+/* Node's full path: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_PATH "/soc/spi@40004000/camera@0"
+
+/* Node's name with unit-address: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FULL_NAME "camera@0"
+
+/* Node parent (/soc/spi@40004000) identifier: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_PARENT DT_N_S_soc_S_spi_40004000
+
+/* Node's index in its parent's list of children: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_CHILD_IDX 0
+
+/* Helper macros for child nodes of this node. */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD(fn) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+
+/* Node's dependency ordinal: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_ORD 137
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_ORD_STR_SORTABLE 00137
+
+/* Ordinals for what this node depends on directly: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_REQUIRES_ORDS \
+	136, /* /soc/spi@40004000 */
+
+/* Ordinals for what depends directly on this node: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_SUPPORTS_ORDS /* nothing */
+
+/* Existence and alternate IDs: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_EXISTS 1
+#define DT_N_INST_0_vnd_spi_device DT_N_S_soc_S_spi_40004000_S_camera_0
+#define DT_N_NODELABEL_camera      DT_N_S_soc_S_spi_40004000_S_camera_0
+
+/* Bus info (controller: '/soc/spi@40004000', type: '['spi']') */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_BUS_spi 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_BUS DT_N_S_soc_S_spi_40004000
+
+/* Macros for properties that are special in the specification: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_REG_NUM 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_REG_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_REG_IDX_0_VAL_ADDRESS 0 /* 0x0 */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_RANGES_NUM 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_IRQ_NUM 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_IRQ_LEVEL 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_COMPAT_MATCHES_vnd_spi_device 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_COMPAT_VENDOR_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_COMPAT_VENDOR_IDX_0 "A stand-in for a real vendor which can be used in examples and tests"
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_COMPAT_MODEL_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_COMPAT_MODEL_IDX_0 "spi-device"
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_STATUS_okay 1
+
+/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_PINCTRL_NUM 0
+
+/* Generic property macros: */
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_wakeup_source 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_wakeup_source_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_zephyr_pm_device_runtime_auto 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_zephyr_pm_device_runtime_auto_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible {"vnd,spi-device"}
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_IDX_0 "vnd,spi-device"
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_IDX_0_STRING_UNQUOTED vnd,spi-device
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_IDX_0_STRING_TOKEN vnd_spi_device
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_IDX_0_STRING_UPPER_TOKEN VND_SPI_DEVICE
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, compatible, 0)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, compatible, 0)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_LEN 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_compatible_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_reg {0 /* 0x0 */}
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_reg_IDX_0 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_reg_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_reg_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_zephyr_deferred_init 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_zephyr_deferred_init_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_max_frequency 8000000
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_max_frequency_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_duplex 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_duplex_ENUM_IDX 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_duplex_ENUM_VAL_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_duplex_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_frame_format 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_frame_format_ENUM_IDX 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_frame_format_ENUM_VAL_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_frame_format_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_cpol 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_cpol_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_cpha 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_cpha_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_hold_cs 0
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_spi_hold_cs_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label "camera"
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_STRING_UNQUOTED camera
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_STRING_TOKEN camera
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_STRING_UPPER_TOKEN CAMERA
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_IDX_0 "camera"
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, label, 0)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, label, 0)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, label, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, label, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_LEN 1
+#define DT_N_S_soc_S_spi_40004000_S_camera_0_P_label_EXISTS 1
+
+/*
  * Chosen nodes
  */
 #define DT_CHOSEN_zephyr_entropy                 DT_N_S_soc_S_random_4000d000
@@ -15221,10 +15635,10 @@
 #define DT_CHOSEN_zephyr_ieee802154_EXISTS       1
 
 /* Macros for iterating over all nodes and enabled nodes */
-#define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_ficr_10000000) fn(DT_N_S_soc_S_uicr_10001000) fn(DT_N_S_soc_S_memory_20000000) fn(DT_N_S_soc_S_clock_40000000) fn(DT_N_S_soc_S_power_40000000) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520) fn(DT_N_S_soc_S_radio_40001000) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154) fn(DT_N_S_soc_S_uart_40002000) fn(DT_N_S_soc_S_i2c_40003000) fn(DT_N_S_soc_S_spi_40003000) fn(DT_N_S_soc_S_i2c_40004000) fn(DT_N_S_soc_S_spi_40004000) fn(DT_N_S_soc_S_nfct_40005000) fn(DT_N_S_soc_S_gpiote_40006000) fn(DT_N_S_soc_S_adc_40007000) fn(DT_N_S_soc_S_timer_40008000) fn(DT_N_S_soc_S_timer_40009000) fn(DT_N_S_soc_S_timer_4000a000) fn(DT_N_S_soc_S_rtc_4000b000) fn(DT_N_S_soc_S_temp_4000c000) fn(DT_N_S_soc_S_random_4000d000) fn(DT_N_S_soc_S_ecb_4000e000) fn(DT_N_S_soc_S_ccm_4000f000) fn(DT_N_S_soc_S_watchdog_40010000) fn(DT_N_S_soc_S_rtc_40011000) fn(DT_N_S_soc_S_qdec_40012000) fn(DT_N_S_soc_S_comparator_40013000) fn(DT_N_S_soc_S_egu_40014000) fn(DT_N_S_soc_S_egu_40015000) fn(DT_N_S_soc_S_egu_40016000) fn(DT_N_S_soc_S_egu_40017000) fn(DT_N_S_soc_S_egu_40018000) fn(DT_N_S_soc_S_egu_40019000) fn(DT_N_S_soc_S_timer_4001a000) fn(DT_N_S_soc_S_timer_4001b000) fn(DT_N_S_soc_S_pwm_4001c000) fn(DT_N_S_soc_S_pdm_4001d000) fn(DT_N_S_soc_S_acl_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000) fn(DT_N_S_soc_S_ppi_4001f000) fn(DT_N_S_soc_S_mwu_40020000) fn(DT_N_S_soc_S_pwm_40021000) fn(DT_N_S_soc_S_pwm_40022000) fn(DT_N_S_soc_S_spi_40023000) fn(DT_N_S_soc_S_rtc_40024000) fn(DT_N_S_soc_S_i2s_40025000) fn(DT_N_S_soc_S_usbd_40027000) fn(DT_N_S_soc_S_uart_40028000) fn(DT_N_S_soc_S_qspi_40029000) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0) fn(DT_N_S_soc_S_pwm_4002d000) fn(DT_N_S_soc_S_spi_4002f000) fn(DT_N_S_soc_S_gpio_50000000) fn(DT_N_S_soc_S_gpio_50000300) fn(DT_N_S_soc_S_crypto_5002a000) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart0_default) fn(DT_N_S_pin_controller_S_uart0_default_S_group1) fn(DT_N_S_pin_controller_S_uart0_default_S_group2) fn(DT_N_S_pin_controller_S_uart0_sleep) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart1_default) fn(DT_N_S_pin_controller_S_uart1_default_S_group1) fn(DT_N_S_pin_controller_S_uart1_default_S_group2) fn(DT_N_S_pin_controller_S_uart1_sleep) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c0_default) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1) fn(DT_N_S_pin_controller_S_i2c0_sleep) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c1_default) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1) fn(DT_N_S_pin_controller_S_i2c1_sleep) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1) fn(DT_N_S_pin_controller_S_pwm0_default) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1) fn(DT_N_S_pin_controller_S_pwm0_sleep) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi0_default) fn(DT_N_S_pin_controller_S_spi0_default_S_group1) fn(DT_N_S_pin_controller_S_spi0_sleep) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi1_default) fn(DT_N_S_pin_controller_S_spi1_default_S_group1) fn(DT_N_S_pin_controller_S_spi1_sleep) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi2_default) fn(DT_N_S_pin_controller_S_spi2_default_S_group1) fn(DT_N_S_pin_controller_S_spi2_sleep) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_default) fn(DT_N_S_pin_controller_S_qspi_default_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2) fn(DT_N_S_pin_controller_S_spi3_default) fn(DT_N_S_pin_controller_S_spi3_default_S_group1) fn(DT_N_S_pin_controller_S_spi3_sleep) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_sw_pwm) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_pwm_led_0) fn(DT_N_S_buttons) fn(DT_N_S_buttons_S_button_0) fn(DT_N_S_buttons_S_button_1) fn(DT_N_S_buttons_S_button_2) fn(DT_N_S_buttons_S_button_3) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_load_switch)
-#define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_ficr_10000000) fn(DT_N_S_soc_S_uicr_10001000) fn(DT_N_S_soc_S_memory_20000000) fn(DT_N_S_soc_S_clock_40000000) fn(DT_N_S_soc_S_power_40000000) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520) fn(DT_N_S_soc_S_radio_40001000) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154) fn(DT_N_S_soc_S_uart_40002000) fn(DT_N_S_soc_S_i2c_40003000) fn(DT_N_S_soc_S_spi_40004000) fn(DT_N_S_soc_S_gpiote_40006000) fn(DT_N_S_soc_S_adc_40007000) fn(DT_N_S_soc_S_temp_4000c000) fn(DT_N_S_soc_S_random_4000d000) fn(DT_N_S_soc_S_ecb_4000e000) fn(DT_N_S_soc_S_ccm_4000f000) fn(DT_N_S_soc_S_watchdog_40010000) fn(DT_N_S_soc_S_egu_40014000) fn(DT_N_S_soc_S_egu_40015000) fn(DT_N_S_soc_S_egu_40016000) fn(DT_N_S_soc_S_egu_40017000) fn(DT_N_S_soc_S_egu_40018000) fn(DT_N_S_soc_S_egu_40019000) fn(DT_N_S_soc_S_pwm_4001c000) fn(DT_N_S_soc_S_acl_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000) fn(DT_N_S_soc_S_ppi_4001f000) fn(DT_N_S_soc_S_mwu_40020000) fn(DT_N_S_soc_S_usbd_40027000) fn(DT_N_S_soc_S_uart_40028000) fn(DT_N_S_soc_S_qspi_40029000) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0) fn(DT_N_S_soc_S_spi_4002f000) fn(DT_N_S_soc_S_gpio_50000000) fn(DT_N_S_soc_S_gpio_50000300) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart0_default) fn(DT_N_S_pin_controller_S_uart0_default_S_group1) fn(DT_N_S_pin_controller_S_uart0_default_S_group2) fn(DT_N_S_pin_controller_S_uart0_sleep) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart1_default) fn(DT_N_S_pin_controller_S_uart1_default_S_group1) fn(DT_N_S_pin_controller_S_uart1_default_S_group2) fn(DT_N_S_pin_controller_S_uart1_sleep) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c0_default) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1) fn(DT_N_S_pin_controller_S_i2c0_sleep) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c1_default) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1) fn(DT_N_S_pin_controller_S_i2c1_sleep) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1) fn(DT_N_S_pin_controller_S_pwm0_default) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1) fn(DT_N_S_pin_controller_S_pwm0_sleep) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi0_default) fn(DT_N_S_pin_controller_S_spi0_default_S_group1) fn(DT_N_S_pin_controller_S_spi0_sleep) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi1_default) fn(DT_N_S_pin_controller_S_spi1_default_S_group1) fn(DT_N_S_pin_controller_S_spi1_sleep) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi2_default) fn(DT_N_S_pin_controller_S_spi2_default_S_group1) fn(DT_N_S_pin_controller_S_spi2_sleep) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_default) fn(DT_N_S_pin_controller_S_qspi_default_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2) fn(DT_N_S_pin_controller_S_spi3_default) fn(DT_N_S_pin_controller_S_spi3_default_S_group1) fn(DT_N_S_pin_controller_S_spi3_sleep) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_pwm_led_0) fn(DT_N_S_buttons) fn(DT_N_S_buttons_S_button_0) fn(DT_N_S_buttons_S_button_1) fn(DT_N_S_buttons_S_button_2) fn(DT_N_S_buttons_S_button_3) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_load_switch)
-#define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_10000000, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_10001000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_soc_S_clock_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_nfct_40005000, __VA_ARGS__) fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40007000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_40008000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_40009000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4000a000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_4000b000, __VA_ARGS__) fn(DT_N_S_soc_S_temp_4000c000, __VA_ARGS__) fn(DT_N_S_soc_S_random_4000d000, __VA_ARGS__) fn(DT_N_S_soc_S_ecb_4000e000, __VA_ARGS__) fn(DT_N_S_soc_S_ccm_4000f000, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_40011000, __VA_ARGS__) fn(DT_N_S_soc_S_qdec_40012000, __VA_ARGS__) fn(DT_N_S_soc_S_comparator_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40016000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40017000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40018000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40019000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4001a000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4001b000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4001c000, __VA_ARGS__) fn(DT_N_S_soc_S_pdm_4001d000, __VA_ARGS__) fn(DT_N_S_soc_S_acl_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000, __VA_ARGS__) fn(DT_N_S_soc_S_ppi_4001f000, __VA_ARGS__) fn(DT_N_S_soc_S_mwu_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_40021000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40023000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_40024000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40025000, __VA_ARGS__) fn(DT_N_S_soc_S_usbd_40027000, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4002d000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_4002f000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000300, __VA_ARGS__) fn(DT_N_S_soc_S_crypto_5002a000, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_sw_pwm, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_pwm_led_0, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_buttons_S_button_0, __VA_ARGS__) fn(DT_N_S_buttons_S_button_1, __VA_ARGS__) fn(DT_N_S_buttons_S_button_2, __VA_ARGS__) fn(DT_N_S_buttons_S_button_3, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_load_switch, __VA_ARGS__)
-#define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_10000000, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_10001000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_soc_S_clock_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40007000, __VA_ARGS__) fn(DT_N_S_soc_S_temp_4000c000, __VA_ARGS__) fn(DT_N_S_soc_S_random_4000d000, __VA_ARGS__) fn(DT_N_S_soc_S_ecb_4000e000, __VA_ARGS__) fn(DT_N_S_soc_S_ccm_4000f000, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40016000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40017000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40018000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40019000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4001c000, __VA_ARGS__) fn(DT_N_S_soc_S_acl_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000, __VA_ARGS__) fn(DT_N_S_soc_S_ppi_4001f000, __VA_ARGS__) fn(DT_N_S_soc_S_mwu_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_usbd_40027000, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0, __VA_ARGS__) fn(DT_N_S_soc_S_spi_4002f000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000300, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_pwm_led_0, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_buttons_S_button_0, __VA_ARGS__) fn(DT_N_S_buttons_S_button_1, __VA_ARGS__) fn(DT_N_S_buttons_S_button_2, __VA_ARGS__) fn(DT_N_S_buttons_S_button_3, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_load_switch, __VA_ARGS__)
+#define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_ficr_10000000) fn(DT_N_S_soc_S_uicr_10001000) fn(DT_N_S_soc_S_memory_20000000) fn(DT_N_S_soc_S_clock_40000000) fn(DT_N_S_soc_S_power_40000000) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520) fn(DT_N_S_soc_S_radio_40001000) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154) fn(DT_N_S_soc_S_uart_40002000) fn(DT_N_S_soc_S_i2c_40003000) fn(DT_N_S_soc_S_spi_40003000) fn(DT_N_S_soc_S_i2c_40004000) fn(DT_N_S_soc_S_spi_40004000) fn(DT_N_S_soc_S_spi_40004000_S_camera_0) fn(DT_N_S_soc_S_nfct_40005000) fn(DT_N_S_soc_S_gpiote_40006000) fn(DT_N_S_soc_S_adc_40007000) fn(DT_N_S_soc_S_timer_40008000) fn(DT_N_S_soc_S_timer_40009000) fn(DT_N_S_soc_S_timer_4000a000) fn(DT_N_S_soc_S_rtc_4000b000) fn(DT_N_S_soc_S_temp_4000c000) fn(DT_N_S_soc_S_random_4000d000) fn(DT_N_S_soc_S_ecb_4000e000) fn(DT_N_S_soc_S_ccm_4000f000) fn(DT_N_S_soc_S_watchdog_40010000) fn(DT_N_S_soc_S_rtc_40011000) fn(DT_N_S_soc_S_qdec_40012000) fn(DT_N_S_soc_S_comparator_40013000) fn(DT_N_S_soc_S_egu_40014000) fn(DT_N_S_soc_S_egu_40015000) fn(DT_N_S_soc_S_egu_40016000) fn(DT_N_S_soc_S_egu_40017000) fn(DT_N_S_soc_S_egu_40018000) fn(DT_N_S_soc_S_egu_40019000) fn(DT_N_S_soc_S_timer_4001a000) fn(DT_N_S_soc_S_timer_4001b000) fn(DT_N_S_soc_S_pwm_4001c000) fn(DT_N_S_soc_S_pdm_4001d000) fn(DT_N_S_soc_S_acl_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000) fn(DT_N_S_soc_S_ppi_4001f000) fn(DT_N_S_soc_S_mwu_40020000) fn(DT_N_S_soc_S_pwm_40021000) fn(DT_N_S_soc_S_pwm_40022000) fn(DT_N_S_soc_S_spi_40023000) fn(DT_N_S_soc_S_rtc_40024000) fn(DT_N_S_soc_S_i2s_40025000) fn(DT_N_S_soc_S_usbd_40027000) fn(DT_N_S_soc_S_uart_40028000) fn(DT_N_S_soc_S_qspi_40029000) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0) fn(DT_N_S_soc_S_pwm_4002d000) fn(DT_N_S_soc_S_spi_4002f000) fn(DT_N_S_soc_S_gpio_50000000) fn(DT_N_S_soc_S_gpio_50000300) fn(DT_N_S_soc_S_crypto_5002a000) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart0_default) fn(DT_N_S_pin_controller_S_uart0_default_S_group1) fn(DT_N_S_pin_controller_S_uart0_default_S_group2) fn(DT_N_S_pin_controller_S_uart0_sleep) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart1_default) fn(DT_N_S_pin_controller_S_uart1_default_S_group1) fn(DT_N_S_pin_controller_S_uart1_default_S_group2) fn(DT_N_S_pin_controller_S_uart1_sleep) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c0_default) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1) fn(DT_N_S_pin_controller_S_i2c0_sleep) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c1_default) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1) fn(DT_N_S_pin_controller_S_i2c1_sleep) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1) fn(DT_N_S_pin_controller_S_pwm0_default) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1) fn(DT_N_S_pin_controller_S_pwm0_sleep) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi0_default) fn(DT_N_S_pin_controller_S_spi0_default_S_group1) fn(DT_N_S_pin_controller_S_spi0_sleep) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi1_default) fn(DT_N_S_pin_controller_S_spi1_default_S_group1) fn(DT_N_S_pin_controller_S_spi1_sleep) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi2_default) fn(DT_N_S_pin_controller_S_spi2_default_S_group1) fn(DT_N_S_pin_controller_S_spi2_sleep) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_default) fn(DT_N_S_pin_controller_S_qspi_default_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2) fn(DT_N_S_pin_controller_S_spi3_default) fn(DT_N_S_pin_controller_S_spi3_default_S_group1) fn(DT_N_S_pin_controller_S_spi3_sleep) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_sw_pwm) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_leds_S_ir_send) fn(DT_N_S_leds_S_cs_pin) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_pwm_led_0) fn(DT_N_S_buttons) fn(DT_N_S_buttons_S_button_0) fn(DT_N_S_buttons_S_button_1) fn(DT_N_S_buttons_S_button_2) fn(DT_N_S_buttons_S_button_3) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_data) fn(DT_N_S_data_S_aliases) fn(DT_N_S_data_S_irpwm)
+#define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_ficr_10000000) fn(DT_N_S_soc_S_uicr_10001000) fn(DT_N_S_soc_S_memory_20000000) fn(DT_N_S_soc_S_clock_40000000) fn(DT_N_S_soc_S_power_40000000) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520) fn(DT_N_S_soc_S_radio_40001000) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154) fn(DT_N_S_soc_S_uart_40002000) fn(DT_N_S_soc_S_i2c_40003000) fn(DT_N_S_soc_S_spi_40004000) fn(DT_N_S_soc_S_spi_40004000_S_camera_0) fn(DT_N_S_soc_S_gpiote_40006000) fn(DT_N_S_soc_S_adc_40007000) fn(DT_N_S_soc_S_temp_4000c000) fn(DT_N_S_soc_S_random_4000d000) fn(DT_N_S_soc_S_ecb_4000e000) fn(DT_N_S_soc_S_ccm_4000f000) fn(DT_N_S_soc_S_watchdog_40010000) fn(DT_N_S_soc_S_egu_40014000) fn(DT_N_S_soc_S_egu_40015000) fn(DT_N_S_soc_S_egu_40016000) fn(DT_N_S_soc_S_egu_40017000) fn(DT_N_S_soc_S_egu_40018000) fn(DT_N_S_soc_S_egu_40019000) fn(DT_N_S_soc_S_pwm_4001c000) fn(DT_N_S_soc_S_acl_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000) fn(DT_N_S_soc_S_ppi_4001f000) fn(DT_N_S_soc_S_mwu_40020000) fn(DT_N_S_soc_S_usbd_40027000) fn(DT_N_S_soc_S_uart_40028000) fn(DT_N_S_soc_S_qspi_40029000) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0) fn(DT_N_S_soc_S_spi_4002f000) fn(DT_N_S_soc_S_gpio_50000000) fn(DT_N_S_soc_S_gpio_50000300) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart0_default) fn(DT_N_S_pin_controller_S_uart0_default_S_group1) fn(DT_N_S_pin_controller_S_uart0_default_S_group2) fn(DT_N_S_pin_controller_S_uart0_sleep) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart1_default) fn(DT_N_S_pin_controller_S_uart1_default_S_group1) fn(DT_N_S_pin_controller_S_uart1_default_S_group2) fn(DT_N_S_pin_controller_S_uart1_sleep) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c0_default) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1) fn(DT_N_S_pin_controller_S_i2c0_sleep) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c1_default) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1) fn(DT_N_S_pin_controller_S_i2c1_sleep) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1) fn(DT_N_S_pin_controller_S_pwm0_default) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1) fn(DT_N_S_pin_controller_S_pwm0_sleep) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi0_default) fn(DT_N_S_pin_controller_S_spi0_default_S_group1) fn(DT_N_S_pin_controller_S_spi0_sleep) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi1_default) fn(DT_N_S_pin_controller_S_spi1_default_S_group1) fn(DT_N_S_pin_controller_S_spi1_sleep) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1) fn(DT_N_S_pin_controller_S_spi2_default) fn(DT_N_S_pin_controller_S_spi2_default_S_group1) fn(DT_N_S_pin_controller_S_spi2_sleep) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_default) fn(DT_N_S_pin_controller_S_qspi_default_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2) fn(DT_N_S_pin_controller_S_spi3_default) fn(DT_N_S_pin_controller_S_spi3_default_S_group1) fn(DT_N_S_pin_controller_S_spi3_sleep) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_leds_S_led_3) fn(DT_N_S_leds_S_ir_send) fn(DT_N_S_leds_S_cs_pin) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_pwm_led_0) fn(DT_N_S_buttons) fn(DT_N_S_buttons_S_button_0) fn(DT_N_S_buttons_S_button_1) fn(DT_N_S_buttons_S_button_2) fn(DT_N_S_buttons_S_button_3) fn(DT_N_S_connector) fn(DT_N_S_analog_connector) fn(DT_N_S_data) fn(DT_N_S_data_S_aliases) fn(DT_N_S_data_S_irpwm)
+#define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_10000000, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_10001000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_soc_S_clock_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__) fn(DT_N_S_soc_S_nfct_40005000, __VA_ARGS__) fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40007000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_40008000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_40009000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4000a000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_4000b000, __VA_ARGS__) fn(DT_N_S_soc_S_temp_4000c000, __VA_ARGS__) fn(DT_N_S_soc_S_random_4000d000, __VA_ARGS__) fn(DT_N_S_soc_S_ecb_4000e000, __VA_ARGS__) fn(DT_N_S_soc_S_ccm_4000f000, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_40011000, __VA_ARGS__) fn(DT_N_S_soc_S_qdec_40012000, __VA_ARGS__) fn(DT_N_S_soc_S_comparator_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40016000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40017000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40018000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40019000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4001a000, __VA_ARGS__) fn(DT_N_S_soc_S_timer_4001b000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4001c000, __VA_ARGS__) fn(DT_N_S_soc_S_pdm_4001d000, __VA_ARGS__) fn(DT_N_S_soc_S_acl_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000, __VA_ARGS__) fn(DT_N_S_soc_S_ppi_4001f000, __VA_ARGS__) fn(DT_N_S_soc_S_mwu_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_40021000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40023000, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_40024000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40025000, __VA_ARGS__) fn(DT_N_S_soc_S_usbd_40027000, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4002d000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_4002f000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000300, __VA_ARGS__) fn(DT_N_S_soc_S_crypto_5002a000, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_sw_pwm, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_pwm_led_0, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_buttons_S_button_0, __VA_ARGS__) fn(DT_N_S_buttons_S_button_1, __VA_ARGS__) fn(DT_N_S_buttons_S_button_2, __VA_ARGS__) fn(DT_N_S_buttons_S_button_3, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_data, __VA_ARGS__) fn(DT_N_S_data_S_aliases, __VA_ARGS__) fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
+#define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_10000000, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_10001000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_soc_S_clock_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret1_4000051c, __VA_ARGS__) fn(DT_N_S_soc_S_power_40000000_S_gpregret2_40000520, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_radio_40001000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40003000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__) fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40007000, __VA_ARGS__) fn(DT_N_S_soc_S_temp_4000c000, __VA_ARGS__) fn(DT_N_S_soc_S_random_4000d000, __VA_ARGS__) fn(DT_N_S_soc_S_ecb_4000e000, __VA_ARGS__) fn(DT_N_S_soc_S_ccm_4000f000, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40016000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40017000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40018000, __VA_ARGS__) fn(DT_N_S_soc_S_egu_40019000, __VA_ARGS__) fn(DT_N_S_soc_S_pwm_4001c000, __VA_ARGS__) fn(DT_N_S_soc_S_acl_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_82000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_f8000, __VA_ARGS__) fn(DT_N_S_soc_S_ppi_4001f000, __VA_ARGS__) fn(DT_N_S_soc_S_mwu_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_usbd_40027000, __VA_ARGS__) fn(DT_N_S_soc_S_uart_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000, __VA_ARGS__) fn(DT_N_S_soc_S_qspi_40029000_S_mx25r6435f_0, __VA_ARGS__) fn(DT_N_S_soc_S_spi_4002f000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_gpio_50000300, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_pwm0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi0_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi1_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi2_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_qspi_sleep_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_spi3_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_leds_S_led_2, __VA_ARGS__) fn(DT_N_S_leds_S_led_3, __VA_ARGS__) fn(DT_N_S_leds_S_ir_send, __VA_ARGS__) fn(DT_N_S_leds_S_cs_pin, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_pwm_led_0, __VA_ARGS__) fn(DT_N_S_buttons, __VA_ARGS__) fn(DT_N_S_buttons_S_button_0, __VA_ARGS__) fn(DT_N_S_buttons_S_button_1, __VA_ARGS__) fn(DT_N_S_buttons_S_button_2, __VA_ARGS__) fn(DT_N_S_buttons_S_button_3, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_analog_connector, __VA_ARGS__) fn(DT_N_S_data, __VA_ARGS__) fn(DT_N_S_data_S_aliases, __VA_ARGS__) fn(DT_N_S_data_S_irpwm, __VA_ARGS__)
 #define DT_COMPAT_fixed_partitions_LABEL_mcuboot DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0
 #define DT_COMPAT_fixed_partitions_LABEL_mcuboot_EXISTS 1
 #define DT_COMPAT_fixed_partitions_LABEL_image_0 DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000
@@ -15254,6 +15668,7 @@
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_uarte 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_twi 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_spi 1
+#define DT_COMPAT_HAS_OKAY_vnd_spi_device 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_gpiote 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_saadc 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_temp 1
@@ -15284,7 +15699,6 @@
 #define DT_COMPAT_HAS_OKAY_gpio_keys 1
 #define DT_COMPAT_HAS_OKAY_arduino_header_r3 1
 #define DT_COMPAT_HAS_OKAY_arduino_uno_adc 1
-#define DT_COMPAT_HAS_OKAY_power_switch 1
 
 /*
  * Macros for status "okay" instances of each compatible
@@ -15306,6 +15720,7 @@
 #define DT_N_INST_nordic_nrf_uarte_NUM_OKAY 2
 #define DT_N_INST_nordic_nrf_twi_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_spi_NUM_OKAY 1
+#define DT_N_INST_vnd_spi_device_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_gpiote_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_saadc_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_temp_NUM_OKAY 1
@@ -15336,7 +15751,6 @@
 #define DT_N_INST_gpio_keys_NUM_OKAY 1
 #define DT_N_INST_arduino_header_r3_NUM_OKAY 1
 #define DT_N_INST_arduino_uno_adc_NUM_OKAY 1
-#define DT_N_INST_power_switch_NUM_OKAY 1
 #define DT_FOREACH_OKAY_nordic_nrf52840_dk_nrf52840(fn) fn(DT_N)
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf52840_dk_nrf52840(fn, ...) fn(DT_N, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf52840_dk_nrf52840(fn) fn(0)
@@ -15405,6 +15819,10 @@
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf_spi(fn, ...) fn(DT_N_S_soc_S_spi_40004000, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf_spi(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_nordic_nrf_spi(fn, ...) fn(0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_vnd_spi_device(fn) fn(DT_N_S_soc_S_spi_40004000_S_camera_0)
+#define DT_FOREACH_OKAY_VARGS_vnd_spi_device(fn, ...) fn(DT_N_S_soc_S_spi_40004000_S_camera_0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_INST_vnd_spi_device(fn) fn(0)
+#define DT_FOREACH_OKAY_INST_VARGS_vnd_spi_device(fn, ...) fn(0, __VA_ARGS__)
 #define DT_FOREACH_OKAY_nordic_nrf_gpiote(fn) fn(DT_N_S_soc_S_gpiote_40006000)
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf_gpiote(fn, ...) fn(DT_N_S_soc_S_gpiote_40006000, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf_gpiote(fn) fn(0)
@@ -15525,12 +15943,9 @@
 #define DT_FOREACH_OKAY_VARGS_arduino_uno_adc(fn, ...) fn(DT_N_S_analog_connector, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_arduino_uno_adc(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_arduino_uno_adc(fn, ...) fn(0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_power_switch(fn) fn(DT_N_S_load_switch)
-#define DT_FOREACH_OKAY_VARGS_power_switch(fn, ...) fn(DT_N_S_load_switch, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_power_switch(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_power_switch(fn, ...) fn(0, __VA_ARGS__)
 
 /*
  * Bus information for status "okay" nodes of each compatible
  */
+#define DT_COMPAT_vnd_spi_device_BUS_spi 1
 #define DT_COMPAT_nordic_qspi_nor_BUS_qspi 1

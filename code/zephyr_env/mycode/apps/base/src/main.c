@@ -1,4 +1,5 @@
 #include "ir.h"
+#include "cam.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
@@ -28,7 +29,13 @@ int main(void) {
   printf("hello world\n"); 
   printf("1\n"); 
   gpio_init();
+  pwm_init();
   printf("2\n"); 
-  test();
+  cam_init();
+  while(1) {
+    k_sleep(K_MSEC(3000));
+    write_cmd();
+    //ir_transmit(0x55);
+  }
   printf("done\n"); 
 }

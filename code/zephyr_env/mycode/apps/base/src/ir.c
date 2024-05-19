@@ -1,62 +1,45 @@
 #include "ir.h"
 
-static const struct device *gpio_dev;
-static const struct gpio_dt_spec load_switch = GPIO_DT_SPEC_GET_OR(DT_NODELABEL(DT_NODELABEL(load_switch)), gpios, {0});
-//static struct gpio_dt_spec gpio_dev;
+#define MIN_PERIOD PWM_SEC(1U) / 128U
+#define MAX_PERIOD PWM_SEC(1U) / 38000000U
 
+static const struct gpio_dt_spec gpio_dev= GPIO_DT_SPEC_GET(DT_NODELABEL(ir_send), gpios);
+static const struct pwm_dt_spec pwm_led0 = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led0));
 
 void gpio_init(void) {
-    int ret;
-    printf("1.1\n"); 
-    gpio_dev = device_get_binding("GPIO_0");
-    
-    //gpio_dev = device_get_binding(DEVICE_DT_GET_ANY(arduino-header-r3));
-    printf("1.2\n"); 
-
-    if (!gpio_is_ready_dt(&load_switch)) {
-        //printf("%s\n", DT_PROP(DT_NODELABEL(load_switch), status));
-		printf("The load switch pin GPIO port is not ready.\n");
-		return;
-	}
-
+    int ret = 1;
     // Get GPIO device
-    if (!gpio_dev) {
+    if (!gpio_is_ready_dt(&gpio_dev)) {
         printf("Error: GPIO device not found\n");
         return;
     }
 
-    // Configure GPIO pin
-    ret = gpio_pin_configure(gpio_dev, IR_PIN, GPIO_OUTPUT); // or GPIO_INPUT
-    printf("1.3\n"); 
-
-    //ret = gpio_pin_configure_dt(&gpio_dev, GPIO_OUTPUT); // or GPIO_INPUT
-    if (ret < 0) {
-        printf("Error: Failed to configure GPIO pin\n");
-        return;
-    }
+    ret = gpio_pin_configure_dt(&gpio_dev, GPIO_OUTPUT_ACTIVE);
+	if (ret < 0) {
+		return;
+	}
 };
 
-void test(void) {
-    int ret;
-    // Turn on the GPIO pin
-    ret = gpio_pin_set(gpio_dev, IR_PIN, 0);
-    //ret = gpio_pin_set_dt(&gpio_dev, 1);
-    if (ret < 0) {
-        printf("Error: Failed to set GPIO pin\n");
-        return;
+/**
+ * Reads the bits of payload and blasts IR with correct delays
+*/
+void ir_transmit(uint8_t data) {
+    for (int bit = 0; bit < 8; bit++) {
+        if ((data & 0x1 << bit) > 0) {
+            /* Send logical 1 using NEC protocol delays */
+            gpio_pin_set_dt(&gpio_dev, 1);
+            k_sleep(K_USEC(562.2));
+            gpio_pin_set_dt(&gpio_dev, 0);
+            k_sleep(K_USEC(1687));
+        } else {
+            /* Send logical 0 using NEC protocol delays */
+            gpio_pin_set_dt(&gpio_dev, 1);
+            k_sleep(K_USEC(562.2));
+            gpio_pin_set_dt(&gpio_dev, 0);
+            k_sleep(K_USEC(562.2));
+        }
     }
-
-    // Delay for 1 second
-    k_sleep(K_SECONDS(1));
-
-    // Turn off the GPIO pin
-    ret = gpio_pin_set(gpio_dev, IR_PIN, 1);
-    //ret = gpio_pin_set_dt(&gpio_dev, 0);
-    if (ret < 0) {
-        printf("Error: Failed to set GPIO pin\n");
-        return;
-    }
-};
+}
 
 /*
  * Formats a struct and sends it as a packet over IR
@@ -71,32 +54,59 @@ void send_command(struct packet *payload) {
   memcpy(buffer, payload, sizeof(struct packet));
 
   /* Leading Pulse */
-  // GPIO HIGH
+  gpio_pin_set_dt(&gpio_dev, 1);
   k_sleep(K_MSEC(9));
-  // GPIO LOW
+  gpio_pin_set_dt(&gpio_dev, 0);
   /* Send each byte over IR */
   for (int i = 0; i < 35; i++) {
     ir_transmit(buffer[i]);
   }
 }
 
-/**
- * Reads the bits of payload and blasts IR with correct delays
-*/
-void ir_transmit(uint8_t data) {
-    for (int bit = 0; bit < 8; bit++) {
-        if ((data & 0x1 << bit) > 0) {
-            /* Send logical 1 using NEC protocol delays */
-            // GPIO HIGH
-            k_sleep(K_USEC(562.2));
-            // GPIO LOW
-            k_sleep(K_USEC(1687));
-        } else {
-            /* Send logical 0 using NEC protocol delays */
-            // GPIO HIGH
-            k_sleep(K_USEC(562.2));
-            // GPIO LOW
-            k_sleep(K_USEC(562.2));
-        }
-    }
-}
+/* PWM code */
+
+void pwm_init(void) {
+    uint32_t max_period;
+	uint32_t period;
+	uint8_t dir = 0U;
+	int ret;
+
+    if (!pwm_is_ready_dt(&pwm_led0)) {
+		printk("Error: PWM device %s is not ready\n",
+		       pwm_led0.dev->name);
+		return;
+	}
+
+    max_period = MAX_PERIOD;
+	// while (pwm_set_dt(&pwm_led0, max_period, max_period / 2U)) {
+	// 	max_period /= 2U;
+	// 	if (max_period < (4U * MIN_PERIOD)) {
+	// 		printf("Error: PWM device "
+	// 		       "does not support a period at least %lu\n",
+	// 		       4U * MIN_PERIOD);
+	// 		return;
+	// 	}
+	// }
+
+    period = max_period;
+    printf("period = %d\n", period);
+    while (1) {
+		//ret = pwm_set_dt(&pwm_led0, 1/38000000, 1/76000000);
+        ret = pwm_set_dt(&pwm_led0, period, period / 2U);
+		if (ret) {
+			printk("Error %d: failed to set pulse width\n", ret);
+			return;
+		}
+
+		period = dir ? (period * 2U) : (period / 2U);
+		if (period > max_period) {
+			period = max_period / 2U;
+			dir = 0U;
+		} else if (period < MIN_PERIOD) {
+			period = MIN_PERIOD * 2U;
+			dir = 1U;
+		}
+
+		k_sleep(K_SECONDS(4U));
+	}
+};

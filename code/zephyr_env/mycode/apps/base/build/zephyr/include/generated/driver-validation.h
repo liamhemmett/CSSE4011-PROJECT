@@ -6,7 +6,11 @@
                 
 #define K_SYSCALL_DRIVER_GPIO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
 
+#define K_SYSCALL_DRIVER_PWM(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, pwm, PWM)
+
 #define K_SYSCALL_DRIVER_UART(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
+
+#define K_SYSCALL_DRIVER_SPI(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, spi, SPI)
 
 #define K_SYSCALL_DRIVER_CRYPTO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
 
@@ -84,8 +88,6 @@
 
 #define K_SYSCALL_DRIVER_PTP_CLOCK(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, ptp_clock, PTP_CLOCK)
 
-#define K_SYSCALL_DRIVER_PWM(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, pwm, PWM)
-
 #define K_SYSCALL_DRIVER_REGULATOR_PARENT(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, regulator_parent, REGULATOR_PARENT)
 
 #define K_SYSCALL_DRIVER_REGULATOR(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, regulator, REGULATOR)
@@ -101,8 +103,6 @@
 #define K_SYSCALL_DRIVER_SENSOR(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
 
 #define K_SYSCALL_DRIVER_SMBUS(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, smbus, SMBUS)
-
-#define K_SYSCALL_DRIVER_SPI(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, spi, SPI)
 
 #define K_SYSCALL_DRIVER_SYSCON(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, syscon, SYSCON)
 

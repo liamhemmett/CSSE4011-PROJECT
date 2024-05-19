@@ -1202,14 +1202,71 @@ zephyr_udc0: &usbd {
      current-speed = <115200>;
 };
 
+/ {
+     aliases {
+          ir = &ir_send;
+          cs = &cs_pin;
+     };
 
+     leds {
+          ir_send: ir_send {
+               status = "okay";
+               gpios = <&gpio0 27 ((1 << 5) | (0 << 0))>;
+               label = "IR Transmit Pin";
+          };
+          cs_pin: cs_pin {
+               status = "okay";
+               gpios = <&gpio0 26 ((1 << 5) | (0 << 0))>;
+               label = "Camera CS Pin";
+          };
+
+
+     };
+};
 
 / {
- load_switch: load_switch {
-  compatible = "power-switch";
+     data {
+          aliases {
+               irp = &irpwm;
+          };
 
-  gpios = <&gpio0 27 (0 << 0)>;
- };
+          irpwm: irpwm {
+               pwms = <&pwm0 0 (((20) * 1000UL) * 1000UL) (0 << 0)>;
+               label = "irpwm";
+          };
+     };
+};
+
+&spi1 {
+     status = "okay";
+     pinctrl-0 = <&spi2_default>;
+     pinctrl-1 = <&spi2_sleep>;
+     pinctrl-names = "default", "sleep";
+     camera: camera@0 {
+             compatible = "vnd,spi-device";
+             reg = <0>;
+             spi-max-frequency = <8000000>;
+             label = "camera";
+     };
+};
+
+&pinctrl {
+     spi1_default: spi1_default {
+          group1 {
+               psels = <((((((0) * 32U) + (31)) & 0x7FU) << 0U) | ((4U & 0xFFFFU) << 16U))>,
+                    <((((((0) * 32U) + (30)) & 0x7FU) << 0U) | ((5U & 0xFFFFU) << 16U))>,
+                    <((((((1) * 32U) + (8)) & 0x7FU) << 0U) | ((6U & 0xFFFFU) << 16U))>;
+          };
+     };
+
+     spi1_sleep: spi1_sleep {
+          group1 {
+               psels = <((((((0) * 32U) + (31)) & 0x7FU) << 0U) | ((4U & 0xFFFFU) << 16U))>,
+                    <((((((0) * 32U) + (30)) & 0x7FU) << 0U) | ((5U & 0xFFFFU) << 16U))>,
+                    <((((((1) * 32U) + (8)) & 0x7FU) << 0U) | ((6U & 0xFFFFU) << 16U))>;
+               low-power-enable;
+          };
+     };
 };
 # 0 "<command-line>" 2
 # 1 "/root/csse4011/project/CSSE4011-PROJECT/code/zephyr_env/zephyr/misc/empty_file.c"
