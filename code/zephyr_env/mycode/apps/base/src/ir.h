@@ -22,6 +22,7 @@ struct packet {
   __uint8_t end;
 };
 
+
 void gpio_init(void);
 void ir_transmit(uint8_t data);
 void send_command(struct packet *payload);
